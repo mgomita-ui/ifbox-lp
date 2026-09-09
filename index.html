@@ -318,6 +318,23 @@
   .notes div{padding-left:12px;border-left:2px solid var(--line)}
   @media (max-width:800px){.notes{grid-template-columns:1fr}}
 
+  /* status : いまの状態を最初に並べる（身内向け） */
+  .status-band{max-width:1320px;margin:0 auto 52px;padding:0 24px}
+  .status-band .in{background:#fff;border:2px solid var(--navy);border-radius:20px;padding:30px 34px}
+  .status-band h2{font-size:19px;font-weight:900;color:var(--navy);margin-bottom:4px}
+  .status-band .now{font-size:14.5px;color:var(--ink-2);line-height:1.85}
+  .status-band .now b{color:var(--ink)}
+  .status-band .two{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .status-band .box{border-radius:12px;padding:16px 20px}
+  .status-band .box.ok{background:var(--navy-soft)}
+  .status-band .box.open{background:var(--gold-soft)}
+  .status-band .box h3{font-size:14px;font-weight:900;margin-bottom:8px}
+  .status-band .box.ok h3{color:var(--navy)}
+  .status-band .box.open h3{color:var(--gold-deep)}
+  .status-band .box ul{margin:0;padding-left:1.2em}
+  .status-band .box li{font-size:13.5px;color:var(--ink-2);margin:4px 0;line-height:1.7}
+  @media (max-width:760px){.status-band .two{grid-template-columns:1fr}.status-band .in{padding:24px 20px}}
+
   /* demo : 1枚の案件カードが積み上がる */
   .demo{margin-top:26px}
   .demo .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:4px;align-items:stretch}
@@ -483,6 +500,35 @@
     </div>
   </div>
 </header>
+
+<div class="status-band">
+  <div class="in">
+    <h2>いまの状態</h2>
+    <p class="now"><b>サービスはまだ動いていません。</b>この画面は、IFboxがどういうものかを共有するためのものです。投稿フォームは、内容がメールで届くだけです。</p>
+    <div class="two">
+      <div class="box ok">
+        <h3>決まっていること</h3>
+        <ul>
+          <li>入口（投稿・閲覧・名乗り）は無料</li>
+          <li>費用が出るのは、取引が成立したときだけ</li>
+          <li>取引の価格と、関わった人への配分はAIが決める</li>
+          <li>IFboxの取り分は、AIではなく先に決めたルールで計算する</li>
+          <li>IFboxは場を提供するだけ。事業は参加者のもの</li>
+        </ul>
+      </div>
+      <div class="box open">
+        <h3>まだ決まっていないこと</h3>
+        <ul>
+          <li>配分の決定ルールと、成功報酬の条件</li>
+          <li>取引の対象（利用権か、権利の譲渡か、成果物か）</li>
+          <li>AI運営サービスの料金、事業持分の条件</li>
+          <li>運営法人</li>
+          <li>公開の時期</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- 02：もしの流通をつくる -->
 <div class="chap" id="act2">
@@ -775,7 +821,7 @@
         <li>AI社員が整理・需要確認し、実証へ進める</li>
         <li>投稿だけで、後から料金や持分を求めることはない</li>
       </ul>
-      <p class="micro"><b style="color:#fff">IFboxは、いまつくっています。</b>ここに置いていただいた“もし”は、公開の準備が整いしだい、最初にご連絡します。いただいた内容は、設計と検証にも使わせていただきます。</p>
+      <p class="micro"><b style="color:#fff">まだサービスは動いていません。</b>いま届くのはメールだけです。それでも、どんな“もし”が集まるかは設計の材料になるので、思いついたものがあれば置いていってください。</p>
       <p class="firm">IFbox<small>IDEAS FLOW TO A BETTER SOCIETY ｜ 2026年</small></p>
     </div>
     <form class="cf" id="cform" novalidate>
@@ -785,7 +831,7 @@
       <label>あなたの“もし”<textarea name="msg" rows="4" placeholder="例：もし、冷蔵庫の中身を撮るだけで献立が決まったら／もし、子どもが勉強した分だけ動画を見られる仕組みがあったら／もし、親の通院の記録を家族で共有できたら など"></textarea></label>
       <label class="agree" style="display:flex;align-items:flex-start;gap:8px;font-weight:500"><input type="checkbox" name="agree" required style="width:auto;margin-top:5px"><span><a href="#privacy">個人情報の取り扱い</a>に同意します</span></label>
       <button class="btn btn-teal" type="submit" style="width:100%">“もし”を投稿する</button>
-      <p class="pv">送信ボタンを押すと、入力内容を本文にしたメール作成画面が開きます。整った企画書は不要です。</p>
+      <p class="pv">送信ボタンを押すと、入力内容を本文にしたメール作成画面が開きます。いまはそれだけです。</p>
       <div class="ok" id="cok" role="status">
         <p style="font-weight:700;margin-bottom:6px">メール作成画面を開きました。送信して完了です。</p>
         <p style="font-size:13px">画面が開かない場合は、下のボタンで本文をコピーし、<b>m.gomita@canvas-sr.jp</b> 宛にお送りください。</p>
@@ -817,7 +863,7 @@
 </div>
 
 <footer>
-  <p>IFboxはいま準備を進めており、本ページに記載の機能はまだご利用いただけません。価格と配分の決定ルール、成功報酬の条件は設計中で、確定したものではありません。契約とサービス運営の責任は運営法人が負い、各プロジェクトを進めるかどうかはそのオーナーが決めます。出資募集・契約は登録事業者との連携を前提に設計しています。</p>
+  <p>このページはサービスイメージの共有用です。記載の機能はまだ動いていません。価格と配分の決定ルール、成功報酬の条件は設計中で、確定したものではありません。契約とサービス運営の責任は運営法人が負い、各プロジェクトを進めるかどうかはそのオーナーが決めます。出資募集・契約は登録事業者との連携を前提に設計しています。</p>
   <p>© 2026 IFbox ｜ <a href="#privacy">個人情報の取り扱いについて</a></p>
 </footer>
 
