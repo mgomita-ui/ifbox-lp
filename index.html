@@ -304,6 +304,44 @@
   .story hr{border:0;height:1px;background:var(--line);margin:30px 0 26px;width:70px}
   @media (max-width:700px){.story p{font-size:15.5px;line-height:2}.story p br{display:none}}
 
+  /* demo : 1枚の案件カードが積み上がる */
+  .demo{margin-top:26px}
+  .demo .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:18px}
+  .demo .steps button{font:inherit;text-align:left;cursor:pointer;background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:12px 14px;transition:border-color .18s,background .18s}
+  .demo .steps button .n{display:block;font-family:var(--latin);font-size:11.5px;font-weight:600;letter-spacing:.12em;color:var(--ink-3)}
+  .demo .steps button .t{display:block;font-size:15.5px;font-weight:900;color:var(--ink-3);margin-top:2px}
+  .demo .steps button[aria-selected="true"]{border-color:var(--gold);background:var(--gold-soft)}
+  .demo .steps button[aria-selected="true"] .n{color:var(--gold-deep)}
+  .demo .steps button[aria-selected="true"] .t{color:var(--navy)}
+  .demo .steps button:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+  .demo .board{border:1px solid var(--line);border-radius:14px;background:#fff;overflow:hidden}
+  .demo .board .hd{background:var(--navy);color:#fff;padding:14px 20px;font-size:13px;font-weight:700;display:flex;align-items:center;gap:10px}
+  .demo .board .hd:before{content:"";width:9px;height:9px;border-radius:50%;background:var(--gold);flex:none}
+  .demo .board .body{padding:6px 20px 18px}
+  .demo .row{display:grid;grid-template-columns:104px 1fr;gap:16px;padding:16px 0;border-bottom:1px dashed var(--line);opacity:0;transform:translateY(8px);transition:opacity .45s ease,transform .45s ease}
+  .demo .row:last-child{border-bottom:0}
+  .demo .row.on{opacity:1;transform:none}
+  .demo .row .who{font-size:12.5px;font-weight:700;color:var(--gold-deep);background:var(--gold-soft);border-radius:6px;padding:5px 8px;height:max-content;text-align:center;line-height:1.5}
+  .demo .row .say{font-size:15.5px;font-weight:700;color:var(--navy);line-height:1.6}
+  .demo .row .did{font-size:13.5px;color:var(--ink-2);margin-top:3px;line-height:1.7}
+  .demo .row.seed .who{color:var(--navy);background:var(--navy-soft)}
+  .demo .split{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:4px;opacity:0;transform:translateY(8px);transition:opacity .45s ease,transform .45s ease}
+  .demo .split.on{opacity:1;transform:none}
+  .demo .split .s{background:var(--navy);color:#fff;border-radius:10px;padding:12px 14px;text-align:center}
+  .demo .split .s b{display:block;font-family:var(--latin);font-size:21px;font-weight:700;color:var(--gold)}
+  .demo .split .s span{font-size:12px;color:rgba(255,255,255,.82);line-height:1.5;display:block;margin-top:2px}
+  .demo .foot{padding:14px 20px 0;border-top:1px solid var(--line);margin-top:4px;font-size:13px;color:var(--ink-3);line-height:1.7}
+  .demo .exp{margin-top:16px;font-size:14.5px;color:var(--ink-2);line-height:1.9;min-height:3.8em}
+  .demo .exp b{color:var(--ink)}
+  @media (max-width:760px){
+    .demo .steps{grid-template-columns:1fr}
+    .demo .row{grid-template-columns:1fr;gap:6px;padding:14px 0}
+    .demo .row .who{width:max-content}
+    .demo .split{grid-template-columns:1fr}
+    .demo .exp{min-height:0}
+  }
+  @media (prefers-reduced-motion:reduce){.demo .row,.demo .split{transition:none}}
+
   /* split : AIが裁いて分ける */
   .split3{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:20px}
   .split3 .c{border:1px solid var(--line);border-radius:12px;padding:20px 22px;background:#fff}
@@ -466,10 +504,41 @@
     <div><span class="pill"><b>01</b><span>しくみ</span></span><span class="kicker gold">“もし”が実現するまで</span></div>
     <h2 class="t">投げかける。合体させる。<br>売り方をつける。</h2>
     <p class="lead">投稿箱ではありません。誰かの「もし」に、別の誰かの「作ってる」が合わさり、さらに別の誰かの「売れる」が乗る。<b>この3つがそろうと、思いつきは事業になります。</b>IFboxは、その3つが出会う場所です。</p>
-    <div class="scheme">
-      <div class="s"><h3>投げかける</h3><p>「もし、こんなのがあれば」を出します。整っていなくて構いません。計画も企画書も要らず、思いついたまま並べられます。</p></div>
-      <div class="s"><h3>合体させる</h3><p>「僕もこんなの作ってる」が集まります。別々に進んでいたものが組み合わさり、一人では届かなかったところまで形になります。ここでチームができます。</p></div>
-      <div class="s"><h3>売り方をつける</h3><p>「僕はこんな売り方できる」で世に出ます。売りたい人と買いたい人の取引になり、その価格と、関わった人への配分はAIが決める設計です。</p></div>
+    <div class="demo">
+      <div class="steps" role="tablist">
+        <button type="button" role="tab" aria-selected="true" data-step="1"><span class="n">STEP 01</span><span class="t">投げかける</span></button>
+        <button type="button" role="tab" aria-selected="false" data-step="2"><span class="n">STEP 02</span><span class="t">合体させる</span></button>
+        <button type="button" role="tab" aria-selected="false" data-step="3"><span class="n">STEP 03</span><span class="t">売り方をつける</span></button>
+      </div>
+      <div class="board">
+        <div class="hd">案件カード</div>
+        <div class="body">
+          <div class="row seed" data-at="1">
+            <span class="who">出した人</span>
+            <div><p class="say">「もし、冷蔵庫の中身を撮るだけで献立が決まったら」</p><p class="did">思いつきのまま置いた。計画も企画書もなし。</p></div>
+          </div>
+          <div class="row" data-at="2">
+            <span class="who">乗った人</span>
+            <div><p class="say">「僕もこんなの作ってる」</p><p class="did">レシートを読む部分は、もう動いている。</p></div>
+          </div>
+          <div class="row" data-at="2">
+            <span class="who">乗った人</span>
+            <div><p class="say">「そこなら手伝える」</p><p class="did">栄養計算を足せる。子ども向けの設定も。</p></div>
+          </div>
+          <div class="row" data-at="3">
+            <span class="who">乗った人</span>
+            <div><p class="say">「こう売ればいいと思う」</p><p class="did">近所のスーパーのチラシと組ませて、無料で配る。</p></div>
+          </div>
+          <div class="split" data-at="3">
+            <div class="s"><b>?</b><span>出した人</span></div>
+            <div class="s"><b>?</b><span>作った人</span></div>
+            <div class="s"><b>?</b><span>売った人</span></div>
+          </div>
+          <p class="foot" data-at="3">売れた金額と、誰が何をしたかの記録から、<b style="color:var(--navy)">AIが配分を出します</b>。<a href="#split" style="color:var(--gold-deep);font-weight:700">分け方を見る ›</a></p>
+        </div>
+      </div>
+      <p class="exp" data-exp="1"></p>
+      <p class="sm" style="margin-top:6px">※説明のための例で、実在の案件ではありません。</p>
     </div>
     <p class="note" style="margin-top:14px">※現在は構想・設計段階です。上記は目指している流れであり、参加条件や具体的な手続きは検討中です。すべての“もし”の事業化や、取引の成立を保証するものではありません。<br>※売買は実現までの途中段階でも行える構想です。取引の対象（利用権か、権利の譲渡か、成果物か）は現在設計中で、決まりしだいお示しします。<br>※入口は無料です。費用の考え方は<a href="#act5" style="color:var(--teal-deep)">価格</a>をご覧ください。</p>
   </section>
@@ -746,6 +815,46 @@
 </footer>
 
 <div class="ribbon rb-br" aria-hidden="true" style="position:absolute;bottom:0"><svg viewBox="0 0 640 420"><path d="M680 360 C520 440 380 380 310 280 C240 180 310 40 520 0 L680 0Z" fill="#2E5A9E" opacity=".8"/><path d="M680 280 C550 360 430 320 390 230 C350 140 420 40 580 0 L680 0Z" fill="#0E2A5B" opacity=".9"/></svg></div>
+
+<script>
+  (function(){
+    var wrap=document.querySelector('.demo'); if(!wrap) return;
+    var btns=wrap.querySelectorAll('.steps button'),
+        items=wrap.querySelectorAll('[data-at]'),
+        exp=wrap.querySelector('.exp'),
+        played=false, timer=null;
+    var TEXT={
+      1:'「もし、こんなのがあれば」を出します。整っていなくて構いません。計画も企画書も要らず、思いついたまま置けます。',
+      2:'「僕もこんなの作ってる」が集まります。別々に進んでいたものが組み合わさり、一人では届かなかったところまで形になります。<b>ここでチームができます。</b>',
+      3:'「僕はこんな売り方できる」で世に出ます。売りたい人と買いたい人の取引になり、<b>その価格と、関わった人への配分はAIが決める設計です。</b>'
+    };
+    function show(n,quiet){
+      btns.forEach(function(b){b.setAttribute('aria-selected', b.dataset.step==String(n)?'true':'false');});
+      items.forEach(function(el){ el.classList.toggle('on', Number(el.dataset.at)<=n); });
+      exp.innerHTML=TEXT[n];
+      if(!quiet && timer){ clearTimeout(timer); timer=null; }
+    }
+    btns.forEach(function(b){ b.addEventListener('click',function(){ played=true; show(Number(b.dataset.step)); }); });
+    show(1,true);
+    var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+    if(reduce){ show(3,true); return; }
+    function play(){
+      if(played) return; played=true;
+      window.removeEventListener('scroll',check); window.removeEventListener('resize',check);
+      timer=setTimeout(function(){ show(2,true);
+        timer=setTimeout(function(){ show(3,true); },1500);
+      },1200);
+    }
+    function check(){
+      var r=wrap.getBoundingClientRect();
+      var vh=window.innerHeight||document.documentElement.clientHeight;
+      if(r.top < vh*0.8 && r.bottom > vh*0.15) play();
+    }
+    window.addEventListener('scroll',check,{passive:true});
+    window.addEventListener('resize',check,{passive:true});
+    check();
+  })();
+</script>
 
 <script>
   (function(){
