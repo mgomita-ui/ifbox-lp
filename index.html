@@ -319,7 +319,39 @@
   .notes div{padding-left:12px;border-left:2px solid var(--line)}
   @media (max-width:800px){.notes{grid-template-columns:1fr}}
 
-  /* film : 75秒のものがたり */
+  /* mcta : サムネ＋バナー（4.0と同形式） */
+  .mrow{max-width:1320px;margin:0 auto 52px;padding:0 24px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .mcta{display:grid;grid-template-columns:120px 1fr auto;gap:16px;align-items:center;text-decoration:none;
+        border-radius:14px;padding:14px 18px 14px 14px;border:1px solid var(--line);background:#fff;
+        color:var(--ink);box-shadow:var(--shadow);transition:transform .18s,box-shadow .18s}
+  .mcta:hover{transform:translateY(-2px);box-shadow:0 18px 40px rgba(14,42,91,.18)}
+  .mcta:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+  .mcta .cv{width:120px;height:74px;border-radius:8px;overflow:hidden;background:#0C0D10;flex:none;position:relative}
+  .mcta .cv img{width:100%;height:100%;object-fit:cover;display:block}
+  .mcta .cv .pl{position:absolute;inset:0;display:grid;place-items:center}
+  .mcta .cv .pl b{width:30px;height:30px;border-radius:50%;background:rgba(246,166,35,.94);color:#0E2A5B;
+                  display:grid;place-items:center;font-size:13px;padding-left:2px}
+  .mcta .tx{display:grid;gap:2px;min-width:0}
+  .mcta .tag{display:inline-flex;align-items:center;gap:6px;font-size:10.5px;font-weight:700;letter-spacing:.06em;
+             color:var(--navy);background:var(--gold);padding:2px 9px;border-radius:999px;width:max-content}
+  .mcta .tt{font-weight:900;font-size:16px;line-height:1.4;color:var(--navy)}
+  .mcta .tt small{display:block;font-weight:500;font-size:12px;color:var(--ink-2);margin-top:2px}
+  .mcta .meta{font-size:11.5px;color:var(--ink-3);margin-top:3px}
+  .mcta .go{width:34px;height:34px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;
+            font-weight:900;font-size:17px;flex:none;transition:transform .18s}
+  .mcta:hover .go{transform:translateX(3px)}
+  @media (max-width:860px){.mrow{grid-template-columns:1fr}}
+  @media (max-width:420px){.mcta{grid-template-columns:88px 1fr auto}.mcta .cv{width:88px;height:56px}}
+
+  /* film : 全画面プレイヤー */
+  .film{position:fixed;inset:0;z-index:100;background:rgba(7,21,47,.96);display:none;align-items:center;justify-content:center;padding:24px}
+  .film.on{display:flex}
+  .film .box{position:relative;width:min(1160px,100%);border-radius:14px;overflow:hidden;background:#000;box-shadow:0 30px 80px rgba(0,0,0,.55)}
+  .film video{display:block;width:100%;height:auto;background:#000}
+  .film .cl{position:absolute;top:14px;right:14px;font:inherit;font-size:13px;font-weight:700;color:#fff;
+            background:rgba(7,21,47,.6);border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:7px 14px;cursor:pointer}
+  .film .cl:hover{background:var(--gold);color:var(--navy);border-color:transparent}
+
   .film{max-width:1320px;margin:0 auto 52px;padding:0 24px}
   .film .in{background:var(--navy);border-radius:20px;padding:44px 48px 40px;color:#fff}
   .film .eb{color:var(--gold);margin-bottom:12px}
@@ -497,17 +529,31 @@
   </div>
 </header>
 
-<div class="film" id="story">
-  <div class="in">
-    <p class="eb">Story ｜ 75秒</p>
-    <h2>作れるようになったのに、<br>作ったあとが、変わっていない。</h2>
-    <p class="lead">夜と週末に何か作っている人が、思いついたものを一行だけ置く。別の街にいた二人が乗ってくる。<b>三人が出会って、見知らぬ台所で使われるまで。</b></p>
-    <div class="frame">
-      <video controls preload="none" playsinline poster="media/story-poster.jpg">
-        <source src="media/story.mp4" type="video/mp4">
-      </video>
-    </div>
-    <p class="meta"><span>75秒</span><span>ナレーションなし・字幕あり</span><span>音が出ます</span></p>
+<div class="mrow" id="story">
+  <a class="mcta" href="#" id="playStory" aria-label="ものがたり動画を見る（72秒）">
+    <span class="cv"><img src="media/story-poster.jpg" alt=""><span class="pl"><b>▶</b></span></span>
+    <span class="tx">
+      <span class="tag">AIで制作した短編</span>
+      <span class="tt">つくれる。その先は、まだ。<small>三人が出会って、形になるまで</small></span>
+      <span class="meta">72秒 ・ 字幕あり ・ 音が出ます</span>
+    </span>
+    <span class="go" aria-hidden="true">›</span>
+  </a>
+  <a class="mcta" href="manga/" aria-label="漫画を読む">
+    <span class="cv"><img src="media/manga-cover.jpg" alt=""></span>
+    <span class="tx">
+      <span class="tag">AIで制作した漫画</span>
+      <span class="tt">その先を、持ち寄る。<small>同じ物語を、漫画で</small></span>
+      <span class="meta">全11ページ ・ 約3分で読めます</span>
+    </span>
+    <span class="go" aria-hidden="true">›</span>
+  </a>
+</div>
+
+<div class="film" id="filmPlayer" role="dialog" aria-modal="true" aria-label="ものがたり動画">
+  <div class="box">
+    <video id="filmVideo" controls playsinline preload="none" poster="media/story-poster.jpg" src="media/story.mp4"></video>
+    <button type="button" class="cl" id="filmClose">閉じる ✕</button>
   </div>
 </div>
 
@@ -848,6 +894,21 @@
   <p>© 2026 IFbox ｜ <a href="#privacy">個人情報の取り扱いについて</a></p>
 </footer>
 
+
+<script>
+  (function(){
+    var b=document.getElementById('playStory'),p=document.getElementById('filmPlayer'),
+        v=document.getElementById('filmVideo'),c=document.getElementById('filmClose');
+    if(!b||!p||!v)return;
+    function close(){p.classList.remove('on');document.body.style.overflow='';v.pause();b.focus();}
+    b.addEventListener('click',function(e){e.preventDefault();p.classList.add('on');
+      document.body.style.overflow='hidden';v.currentTime=0;var q=v.play();if(q&&q.catch)q.catch(function(){});c.focus();});
+    c.addEventListener('click',close);
+    p.addEventListener('click',function(e){if(e.target===p)close();});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&p.classList.contains('on'))close();});
+    v.addEventListener('ended',close);
+  })();
+</script>
 
 <script>
   (function(){
