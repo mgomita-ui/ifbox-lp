@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>作るのは、もうひとりじゃない。｜IFbox</title>
-<meta name="description" content="AIで、作るのは簡単になった。変わらないのは、そのあと。仲間も資金も売り方も揃わない。IFboxは、その残りを埋める場所です。">
+<title>“もし”を置くと、人が集まる。｜IFbox</title>
+<meta name="description" content="夜と週末に作っているものに、仲間と、売り方と、お金が集まる場所。AIで作るのは簡単になったのに、作ったあとは変わっていない。IFboxは、その残りを埋めます。">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="IFbox">
 <meta property="og:locale" content="ja_JP">
-<meta property="og:title" content="作るのは、もうひとりじゃない。｜IFbox">
-<meta property="og:description" content="AIで、作るのは簡単になった。変わらないのは、そのあと。仲間も資金も売り方も揃わない。IFboxは、その残りを埋める場所です。">
+<meta property="og:title" content="“もし”を置くと、人が集まる。｜IFbox">
+<meta property="og:description" content="夜と週末に作っているものに、仲間と、売り方と、お金が集まる場所。AIで作るのは簡単になったのに、作ったあとは変わっていない。IFboxは、その残りを埋めます。">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Poppins:wght@500;600;700&display=swap">
 <style>
@@ -89,8 +89,8 @@
   /* hero */
   .hero{padding-top:36px}
   .hero .card{padding:0;overflow:hidden;min-height:560px;display:grid;grid-template-columns:1.05fr .95fr;background:var(--navy-deep);color:#fff;position:relative;isolation:isolate}
-  .hero .bg{position:absolute;inset:0;z-index:0;background:url(media/img/hero-bg.jpg) center right/cover no-repeat,linear-gradient(160deg,#07152F 0%,#14294D 55%,#0F3A44 100%);opacity:.95}
-  .hero .bg:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,21,47,.94) 0%,rgba(7,21,47,.82) 40%,rgba(7,21,47,.35) 68%,rgba(7,21,47,.1) 100%)}
+  .hero .bg{position:absolute;inset:0;z-index:0;background:radial-gradient(70% 90% at 78% 46%,rgba(246,166,35,.30) 0%,rgba(246,166,35,0) 62%),linear-gradient(155deg,#0B1E42 0%,#0E2A5B 52%,#123166 100%)}
+  .hero .bg:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,30,66,.86) 0%,rgba(11,30,66,.45) 46%,rgba(11,30,66,0) 72%)}
   .hero .grid{position:absolute;inset:0;z-index:0;opacity:.14;background-image:linear-gradient(rgba(246,166,35,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(246,166,35,.5) 1px,transparent 1px);background-size:44px 44px;mask-image:linear-gradient(90deg,transparent 30%,#000 100%);-webkit-mask-image:linear-gradient(90deg,transparent 30%,#000 100%)}
   .hero .txt{position:relative;z-index:1;padding:56px 56px 52px;min-width:0}
   .hero .txt>*{max-width:100%}
@@ -108,18 +108,26 @@
   .hero .proof span:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--teal-lt);flex:none}
   .hero .firm{margin-top:30px;font-weight:900;font-size:17px;color:#fff;font-family:var(--latin)}
   .hero .firm small{display:block;font-family:var(--latin);font-weight:500;font-size:10.5px;letter-spacing:.14em;color:rgba(255,255,255,.6);margin-top:2px}
-  .ladder{position:relative;z-index:1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:end;gap:12px;padding:0 40px 40px 10px;min-height:420px}
-  .ladder .st{border-radius:8px 8px 0 0;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-bottom:0;padding:16px 10px;text-align:center;display:flex;flex-direction:column;gap:4px;justify-content:flex-end;position:relative;backdrop-filter:blur(2px)}
-  .ladder .st b{font-family:var(--latin);font-weight:700;font-size:20px;line-height:1;color:rgba(255,255,255,.6);letter-spacing:.08em}
-  .ladder .st span{font-size:12px;font-weight:700;color:rgba(255,255,255,.65);line-height:1.5}
-  .ladder .st small{font-size:11px;color:rgba(255,255,255,.5);line-height:1.5}
-  .ladder .s1{height:38%}.ladder .s2{height:56%}
-  .ladder .s3{height:90%;background:linear-gradient(180deg,rgba(46,90,158,.6),rgba(46,90,158,.25));border-color:var(--teal-lt);box-shadow:0 0 40px rgba(46,90,158,.4)}
-  .ladder .s3 b{color:#fff;font-size:40px;letter-spacing:.02em}
-  .ladder .s3 span{color:#fff;font-size:14px}
-  .ladder .s3 small{color:rgba(255,255,255,.8)}
-  .ladder .s3 i{position:absolute;top:-16px;left:50%;transform:translateX(-50%);font-style:normal;background:var(--yellow);color:#1A1A1A;font-size:11px;font-weight:700;padding:4px 10px;border-radius:999px;white-space:nowrap}
-  @media (max-width:900px){.hero .card{grid-template-columns:1fr;min-height:0}.hero .txt{padding:40px 24px 36px}.ladder{min-height:260px;padding:0 24px 28px;gap:8px}.ladder .st{padding:12px 6px}.ladder .st b{font-size:14px}.ladder .s3 b{font-size:30px}.ladder .st small{font-size:10px}.hero .bg:after{background:linear-gradient(180deg,rgba(7,21,47,.9) 0%,rgba(7,21,47,.7) 60%,rgba(7,21,47,.4) 100%)}}
+  /* hero art : 3つの声が、箱に入る */
+  .boxart{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;padding:52px 44px 56px}
+  .boxart .says{display:grid;gap:12px;width:100%;max-width:372px}
+  .boxart .say{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.30);color:#fff;font-size:14.5px;font-weight:700;padding:11px 17px;border-radius:16px 16px 16px 5px;line-height:1.5;width:max-content;max-width:100%;backdrop-filter:blur(4px)}
+  .boxart .say:nth-child(2){justify-self:end;border-radius:16px 16px 5px 16px}
+  .boxart .say:nth-child(3){justify-self:center;border-radius:16px}
+  .boxart .drop{width:2px;height:34px;margin:14px 0 10px;background:linear-gradient(180deg,rgba(246,166,35,0),var(--gold));position:relative}
+  .boxart .drop:after{content:"";position:absolute;left:50%;bottom:-1px;transform:translateX(-50%);border:6px solid transparent;border-top:9px solid var(--gold);border-bottom:0}
+  .boxart .mark{width:184px;filter:drop-shadow(0 18px 44px rgba(246,166,35,.45))}
+  .boxart .mark svg{display:block;width:100%;height:auto}
+  .boxart .cap{margin-top:16px;font-size:12.5px;font-weight:700;letter-spacing:.06em;color:rgba(255,255,255,.62)}
+  @media (max-width:900px){
+    .hero .card{grid-template-columns:1fr;min-height:0}
+    .hero .txt{padding:40px 24px 32px}
+    .hero .bg:after{background:linear-gradient(180deg,rgba(11,30,66,.72) 0%,rgba(11,30,66,.35) 60%,rgba(11,30,66,0) 100%)}
+    .boxart{padding:4px 24px 40px}
+    .boxart .says{max-width:100%}
+    .boxart .mark{width:150px}
+  }
+  @media (max-width:400px){.boxart .say{font-size:12.5px;padding:9px 13px}}
 
   /* chapter band attached to the card below */
   .chap{position:relative;z-index:1;max-width:1160px;margin:0 auto;padding:0 24px}
@@ -390,10 +398,10 @@
     <div class="bg" aria-hidden="true"></div>
     <div class="grid" aria-hidden="true"></div>
     <div class="txt">
-      <p class="eb">IFbox ｜ Ideas flow to a better society</p>
+      <p class="eb">IFbox ｜ “もし”を置いていく場所</p>
       <p class="qq">夜と週末に、何か作っている人へ。</p>
-      <h1><span class="nw">作るのは、もう<em>ひとりじゃない</em>。</span></h1>
-      <p class="sub">AIのおかげで、思いついたその日に動くものが作れるようになりました。でも、一緒にやる仲間も、資金も、売り方も、AIは連れてきてくれません。IFboxは、その残りを埋める場所です。<b>「もし、こんなのがあれば」を置いておくと、面白がった人が乗ってきます。</b></p>
+      <h1><span class="nw">“もし”を置くと、</span><br><span class="nw"><em>人が集まる</em>。</span></h1>
+      <p class="sub">夜と週末に作っているものに、仲間と、売り方と、お金が集まる場所です。<b>作れなくても、乗るだけで参加できます。</b></p>
       <div class="cta">
         <a class="btn btn-teal" href="#post">“もし”を置いてみる <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
         <a class="btn btn-ghost on-dark" href="#split">どう分けるのか</a>
@@ -401,10 +409,15 @@
       <div class="proof"><span>置いておくだけ、無料</span><span>作れなくても、乗るだけで参加できる</span><span>お金の話は、売れてから</span></div>
       <p class="firm">IFbox<small>IDEAS FLOW TO A BETTER SOCIETY ｜ 2026年 ・ 設計案</small></p>
     </div>
-    <div class="ladder" aria-hidden="true">
-      <div class="st s1"><b>IF</b><span>投げかける</span><small>もし、こんなのがあれば</small></div>
-      <div class="st s2"><b>MIX</b><span>合体させる</span><small>僕もこんなの作ってる</small></div>
-      <div class="st s3"><i>ここまで</i><b>SELL</b><span>売り方をつける</span><small>僕はこんな売り方できる</small></div>
+    <div class="boxart" aria-hidden="true">
+      <div class="says">
+        <span class="say">「もし、こんなのがあれば」</span>
+        <span class="say">「僕もこんなの作ってる」</span>
+        <span class="say">「僕はこんな売り方できる」</span>
+      </div>
+      <div class="drop"></div>
+      <div class="mark"><svg viewBox="0 0 40 40"><rect x="2.5" y="2.5" width="35" height="35" rx="9.5" fill="#F6A623"/><circle cx="8.6" cy="8.6" r="2.1" fill="#0E2A5B"/><circle cx="31.4" cy="8.6" r="2.1" fill="#0E2A5B"/><circle cx="8.6" cy="31.4" r="2.1" fill="#0E2A5B"/><circle cx="31.4" cy="31.4" r="2.1" fill="#0E2A5B"/><rect x="12.1" y="11" width="5.3" height="18" rx="2.3" fill="#fff"/><rect x="20.5" y="11" width="5.3" height="18" rx="2.3" fill="#fff"/><rect x="20.5" y="11" width="8.8" height="5.3" rx="2.3" fill="#fff"/><rect x="20.5" y="18.7" width="6.7" height="4.9" rx="2.2" fill="#fff"/></svg></div>
+      <p class="cap">三つ揃うと、形になる</p>
     </div>
   </div>
 </header>
