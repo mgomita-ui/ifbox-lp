@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>“もし”を置くと、人が集まる。｜IFbox</title>
-<meta name="description" content="夜と週末に作っているものに、仲間と、売り方と、お金が集まる場所。AIで作るのは簡単になったのに、作ったあとは変わっていない。IFboxは、その残りを埋めます。">
+<title>その先を、持ち寄る。｜IFbox</title>
+<meta name="description" content="つくれる。その先は、まだ。AIで作るのは簡単になったのに、仲間も資金も売り方も揃わない。IFboxは、その先を持ち寄る場所です。">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="IFbox">
 <meta property="og:locale" content="ja_JP">
-<meta property="og:title" content="“もし”を置くと、人が集まる。｜IFbox">
-<meta property="og:description" content="夜と週末に作っているものに、仲間と、売り方と、お金が集まる場所。AIで作るのは簡単になったのに、作ったあとは変わっていない。IFboxは、その残りを埋めます。">
+<meta property="og:title" content="その先を、持ち寄る。｜IFbox">
+<meta property="og:description" content="つくれる。その先は、まだ。AIで作るのは簡単になったのに、仲間も資金も売り方も揃わない。IFboxは、その先を持ち寄る場所です。">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Poppins:wght@500;600;700&display=swap">
 <style>
@@ -86,48 +86,42 @@
   .concl p.s{font-size:14px;font-weight:400;color:rgba(255,255,255,.85);margin-top:4px}
   .concl .y{color:var(--yellow)}
 
-  /* hero */
+  /* hero : 文字が主役。白地・編集的 */
   .hero{padding-top:36px}
-  .hero .card{padding:0;overflow:hidden;min-height:560px;display:grid;grid-template-columns:1.05fr .95fr;background:var(--navy-deep);color:#fff;position:relative;isolation:isolate}
-  .hero .bg{position:absolute;inset:0;z-index:0;background:radial-gradient(70% 90% at 78% 46%,rgba(246,166,35,.30) 0%,rgba(246,166,35,0) 62%),linear-gradient(155deg,#0B1E42 0%,#0E2A5B 52%,#123166 100%)}
-  .hero .bg:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,30,66,.86) 0%,rgba(11,30,66,.45) 46%,rgba(11,30,66,0) 72%)}
-  .hero .grid{position:absolute;inset:0;z-index:0;opacity:.14;background-image:linear-gradient(rgba(246,166,35,.5) 1px,transparent 1px),linear-gradient(90deg,rgba(246,166,35,.5) 1px,transparent 1px);background-size:44px 44px;mask-image:linear-gradient(90deg,transparent 30%,#000 100%);-webkit-mask-image:linear-gradient(90deg,transparent 30%,#000 100%)}
-  .hero .txt{position:relative;z-index:1;padding:56px 56px 52px;min-width:0}
-  .hero .txt>*{max-width:100%}
-  .hero .eb{color:var(--teal-lt)}
-  .hero .qq{font-size:clamp(15px,1.6vw,18px);font-weight:700;margin:12px 0 6px;color:var(--teal-lt)}
-  .hero h1{font-size:clamp(30px,4vw,52px);font-weight:900;color:#fff;line-height:1.24;letter-spacing:.01em}
-  .hero h1 em{font-style:normal;color:#F6A623}
-  .nw{white-space:nowrap}
-  @media (max-width:560px){.hero h1{font-size:26px}.brand small{display:none}.nav-links .btn{padding:8px 12px!important;font-size:12.5px!important}}
-  .nav-links .btn{white-space:nowrap}
-  .hero .sub{margin-top:20px;font-size:15.5px;font-weight:500;line-height:2;color:rgba(255,255,255,.85);max-width:32em}
-  .hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
-  .hero .proof{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:24px;font-size:13px;color:rgba(255,255,255,.8)}
+  .hero .card{padding:0;overflow:visible;background:#fff;color:var(--ink);box-shadow:var(--shadow)}
+  .hero .stage{position:relative;padding:64px 60px 56px}
+  .hero .eb{color:var(--gold-deep);margin-bottom:30px}
+  .hero .stm{position:relative;display:inline-block;max-width:100%}
+  .hero .stm .l{display:block;font-weight:900;color:var(--navy);letter-spacing:-.01em;line-height:1.18;font-size:clamp(34px,7.2vw,92px);white-space:nowrap}
+  .hero .stm .l em{font-style:normal;background-image:linear-gradient(transparent 64%,var(--gold) 64%,var(--gold) 90%,transparent 90%);padding:0 .04em}
+  .hero .note{position:absolute;font-size:15px;font-weight:700;color:var(--ink-2);white-space:nowrap}
+  .hero .note:before{content:"";position:absolute;top:50%;width:34px;height:1.5px;background:var(--gold)}
+  .hero .note.a{top:6%;left:calc(100% + 54px)}
+  .hero .note.b{top:52%;left:calc(100% + 54px)}
+  .hero .note.c{top:96%;left:calc(100% + 54px)}
+  .hero .note:before{left:-44px}
+  .hero .answer{margin-top:44px;font-size:clamp(20px,2.6vw,30px);font-weight:900;color:var(--navy)}
+  .hero .answer em{font-style:normal;color:var(--gold-deep)}
+  .hero .sub{margin-top:16px;font-size:16px;line-height:1.95;color:var(--ink-2);max-width:34em}
+  .hero .sub b{color:var(--ink)}
+  .hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+  .hero .proof{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:22px;font-size:13px;color:var(--ink-3)}
   .hero .proof span{display:flex;align-items:center;gap:7px}
-  .hero .proof span:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--teal-lt);flex:none}
-  .hero .firm{margin-top:30px;font-weight:900;font-size:17px;color:#fff;font-family:var(--latin)}
-  .hero .firm small{display:block;font-family:var(--latin);font-weight:500;font-size:10.5px;letter-spacing:.14em;color:rgba(255,255,255,.6);margin-top:2px}
-  /* hero art : 3つの声が、箱に入る */
-  .boxart{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;padding:52px 44px 56px}
-  .boxart .says{display:grid;gap:12px;width:100%;max-width:372px}
-  .boxart .say{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.30);color:#fff;font-size:14.5px;font-weight:700;padding:11px 17px;border-radius:16px 16px 16px 5px;line-height:1.5;width:max-content;max-width:100%;backdrop-filter:blur(4px)}
-  .boxart .say:nth-child(2){justify-self:end;border-radius:16px 16px 5px 16px}
-  .boxart .say:nth-child(3){justify-self:center;border-radius:16px}
-  .boxart .drop{width:2px;height:34px;margin:14px 0 10px;background:linear-gradient(180deg,rgba(246,166,35,0),var(--gold));position:relative}
-  .boxart .drop:after{content:"";position:absolute;left:50%;bottom:-1px;transform:translateX(-50%);border:6px solid transparent;border-top:9px solid var(--gold);border-bottom:0}
-  .boxart .mark{width:184px;filter:drop-shadow(0 18px 44px rgba(246,166,35,.45))}
-  .boxart .mark svg{display:block;width:100%;height:auto}
-  .boxart .cap{margin-top:16px;font-size:12.5px;font-weight:700;letter-spacing:.06em;color:rgba(255,255,255,.62)}
-  @media (max-width:900px){
-    .hero .card{grid-template-columns:1fr;min-height:0}
-    .hero .txt{padding:40px 24px 32px}
-    .hero .bg:after{background:linear-gradient(180deg,rgba(11,30,66,.72) 0%,rgba(11,30,66,.35) 60%,rgba(11,30,66,0) 100%)}
-    .boxart{padding:4px 24px 40px}
-    .boxart .says{max-width:100%}
-    .boxart .mark{width:150px}
+  .hero .proof span:before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);flex:none}
+  .hero .firm{margin-top:34px;padding-top:18px;border-top:1px solid var(--line);font-weight:900;font-size:15px;color:var(--navy);font-family:var(--latin)}
+  .hero .firm small{display:block;font-family:var(--latin);font-weight:500;font-size:10.5px;letter-spacing:.14em;color:var(--ink-3);margin-top:3px}
+  @media (max-width:1040px){
+    .hero .stm{display:block}
+    .hero .note{position:static;display:block;white-space:normal;margin:0 0 10px 44px}
+    .hero .note:before{left:-44px;top:.72em}
+    .hero .notes{margin-top:26px}
   }
-  @media (max-width:400px){.boxart .say{font-size:12.5px;padding:9px 13px}}
+  @media (max-width:760px){
+    .hero .stage{padding:40px 24px 40px}
+    .hero .eb{margin-bottom:22px}
+    .hero .note{font-size:14px}
+    .hero .stm .l{white-space:normal}
+  }
 
   /* chapter band attached to the card below */
   .chap{position:relative;z-index:1;max-width:1160px;margin:0 auto;padding:0 24px}
@@ -395,29 +389,25 @@
 <!-- 序：問い -->
 <header class="hero page" id="top">
   <div class="card">
-    <div class="bg" aria-hidden="true"></div>
-    <div class="grid" aria-hidden="true"></div>
-    <div class="txt">
-      <p class="eb">IFbox ｜ “もし”を置いていく場所</p>
-      <p class="qq">夜と週末に、何か作っている人へ。</p>
-      <h1><span class="nw">“もし”を置くと、</span><br><span class="nw"><em>人が集まる</em>。</span></h1>
-      <p class="sub">夜と週末に作っているものに、仲間と、売り方と、お金が集まる場所です。<b>作れなくても、乗るだけで参加できます。</b></p>
+    <div class="stage">
+      <p class="eb">IFbox ｜ 夜と週末に、何か作っている人へ</p>
+      <div class="stm">
+        <span class="l">つくれる。</span>
+        <span class="l">その先は、<em>まだ</em>。</span>
+        <span class="notes">
+          <span class="note a">「僕もこんなの作ってる」</span>
+          <span class="note b">「そこなら手伝える」</span>
+          <span class="note c">「こう売ればいいと思う」</span>
+        </span>
+      </div>
+      <p class="answer">その先を、<em>持ち寄る</em>。</p>
+      <p class="sub">AIのおかげで、思いついたその日に動くものが作れるようになりました。けれど、仲間も、資金も、売り方も、AIは連れてきてくれません。<b>IFboxは、その先を持ち寄る場所です。</b></p>
       <div class="cta">
         <a class="btn btn-teal" href="#post">“もし”を置いてみる <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
-        <a class="btn btn-ghost on-dark" href="#split">どう分けるのか</a>
+        <a class="btn btn-ghost" href="#split">どう分けるのか</a>
       </div>
       <div class="proof"><span>置いておくだけ、無料</span><span>作れなくても、乗るだけで参加できる</span><span>お金の話は、売れてから</span></div>
-      <p class="firm">IFbox<small>IDEAS FLOW TO A BETTER SOCIETY ｜ 2026年 ・ 設計案</small></p>
-    </div>
-    <div class="boxart" aria-hidden="true">
-      <div class="says">
-        <span class="say">「もし、こんなのがあれば」</span>
-        <span class="say">「僕もこんなの作ってる」</span>
-        <span class="say">「僕はこんな売り方できる」</span>
-      </div>
-      <div class="drop"></div>
-      <div class="mark"><svg viewBox="0 0 40 40"><rect x="2.5" y="2.5" width="35" height="35" rx="9.5" fill="#F6A623"/><circle cx="8.6" cy="8.6" r="2.1" fill="#0E2A5B"/><circle cx="31.4" cy="8.6" r="2.1" fill="#0E2A5B"/><circle cx="8.6" cy="31.4" r="2.1" fill="#0E2A5B"/><circle cx="31.4" cy="31.4" r="2.1" fill="#0E2A5B"/><rect x="12.1" y="11" width="5.3" height="18" rx="2.3" fill="#fff"/><rect x="20.5" y="11" width="5.3" height="18" rx="2.3" fill="#fff"/><rect x="20.5" y="11" width="8.8" height="5.3" rx="2.3" fill="#fff"/><rect x="20.5" y="18.7" width="6.7" height="4.9" rx="2.2" fill="#fff"/></svg></div>
-      <p class="cap">三つ揃うと、形になる</p>
+      <p class="firm">IFbox<small>IDEAS FLOW TO A BETTER SOCIETY ｜ 2026年 ・ 構想段階</small></p>
     </div>
   </div>
 </header>
