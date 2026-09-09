@@ -318,29 +318,31 @@
   .demo .board .hd{background:var(--navy);color:#fff;padding:14px 20px;font-size:13px;font-weight:700;display:flex;align-items:center;gap:10px}
   .demo .board .hd:before{content:"";width:9px;height:9px;border-radius:50%;background:var(--gold);flex:none}
   .demo .board .body{padding:6px 20px 18px}
-  .demo .row{display:grid;grid-template-columns:104px 1fr;gap:16px;padding:16px 0;border-bottom:1px dashed var(--line);opacity:0;transform:translateY(8px);transition:opacity .45s ease,transform .45s ease}
-  .demo .row:last-child{border-bottom:0}
-  .demo .row.on{opacity:1;transform:none}
+  @keyframes demoIn{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}
+  .demo .row{display:none;grid-template-columns:104px 1fr;gap:16px;padding:16px 0;border-bottom:1px dashed var(--line)}
+  .demo .row.on{display:grid;animation:demoIn .45s ease both}
+  .demo .row.on:last-of-type{border-bottom:0}
   .demo .row .who{font-size:12.5px;font-weight:700;color:var(--gold-deep);background:var(--gold-soft);border-radius:6px;padding:5px 8px;height:max-content;text-align:center;line-height:1.5}
   .demo .row .say{font-size:15.5px;font-weight:700;color:var(--navy);line-height:1.6}
   .demo .row .did{font-size:13.5px;color:var(--ink-2);margin-top:3px;line-height:1.7}
   .demo .row.seed .who{color:var(--navy);background:var(--navy-soft)}
-  .demo .split{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:4px;opacity:0;transform:translateY(8px);transition:opacity .45s ease,transform .45s ease}
-  .demo .split.on{opacity:1;transform:none}
+  .demo .split{display:none;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
+  .demo .split.on{display:grid;animation:demoIn .45s ease both}
   .demo .split .s{background:var(--navy);color:#fff;border-radius:10px;padding:12px 14px;text-align:center}
   .demo .split .s b{display:block;font-family:var(--latin);font-size:21px;font-weight:700;color:var(--gold)}
   .demo .split .s span{font-size:12px;color:rgba(255,255,255,.82);line-height:1.5;display:block;margin-top:2px}
-  .demo .foot{padding:14px 20px 0;border-top:1px solid var(--line);margin-top:4px;font-size:13px;color:var(--ink-3);line-height:1.7}
-  .demo .exp{margin-top:16px;font-size:14.5px;color:var(--ink-2);line-height:1.9;min-height:3.8em}
+  .demo .foot{display:none;padding:14px 20px 0;border-top:1px solid var(--line);margin-top:16px;font-size:13px;color:var(--ink-3);line-height:1.7}
+  .demo .foot.on{display:block;animation:demoIn .45s ease both}
+  .demo .exp{margin-top:16px;font-size:14.5px;color:var(--ink-2);line-height:1.9}
   .demo .exp b{color:var(--ink)}
   @media (max-width:760px){
     .demo .steps{grid-template-columns:1fr}
-    .demo .row{grid-template-columns:1fr;gap:6px;padding:14px 0}
+    .demo .row.on{grid-template-columns:1fr;gap:6px;padding:14px 0}
     .demo .row .who{width:max-content}
     .demo .split{grid-template-columns:1fr}
     .demo .exp{min-height:0}
   }
-  @media (prefers-reduced-motion:reduce){.demo .row,.demo .split{transition:none}}
+  @media (prefers-reduced-motion:reduce){.demo .row.on,.demo .split.on,.demo .foot.on{animation:none}}
 
   /* split : AIが裁いて分ける */
   .split3{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:20px}
