@@ -190,6 +190,38 @@
   @media (max-width:900px){.hub{grid-template-columns:1fr 1fr;grid-template-rows:auto}.hub .core{grid-column:1/3;grid-row:auto;width:180px;justify-self:center}.hub .p:after{display:none}}
   @media (max-width:560px){.hub{grid-template-columns:1fr}.hub .core{grid-column:1}}
 
+  /* scheme: 7 steps */
+  .scheme{counter-reset:st;display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin-top:22px}
+  .scheme .s{position:relative;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 12px 12px;display:flex;flex-direction:column;gap:5px}
+  .scheme .s:before{counter-increment:st;content:counter(st);font-family:var(--latin);font-weight:700;font-size:13px;width:26px;height:26px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center}
+  .scheme .s h3{font-size:14.5px;font-weight:900;color:var(--navy);line-height:1.35}
+  .scheme .s p{font-size:12px;color:var(--ink-2);line-height:1.55}
+  .scheme .s .who{margin-top:auto;font-size:10.5px;font-weight:700;color:var(--teal-deep);background:var(--teal-soft);padding:2px 7px;border-radius:4px;width:max-content;max-width:100%}
+  .scheme .s .who.gold{color:var(--gold-deep);background:var(--gold-soft)}
+  .scheme .s.free{border:2px solid var(--teal)}
+  .scheme .s.free:before{background:var(--teal)}
+  .scheme .s.pay{border:2px solid var(--gold)}
+  .scheme .s.pay:before{background:var(--gold)}
+  .scheme .s + .s:after{content:"";position:absolute;left:-9px;top:24px;width:9px;height:3px;background:var(--teal-lt)}
+  @media (max-width:1000px){.scheme{grid-template-columns:repeat(4,1fr)}.scheme .s + .s:after{display:none}}
+  @media (max-width:560px){.scheme{grid-template-columns:1fr 1fr}}
+  .trust{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+  .trust .t{border-radius:12px;padding:18px 20px;background:#F8FAFB;border:1px solid var(--line)}
+  .trust .t h3{font-size:16px;font-weight:900;color:var(--navy);margin-bottom:8px;padding-bottom:8px;border-bottom:2px solid var(--teal)}
+  .trust .t ul{margin:0;padding:0;list-style:none;display:grid;gap:6px}
+  .trust .t li{font-size:13.5px;color:var(--ink-2);padding-left:18px;position:relative;line-height:1.6}
+  .trust .t li:before{content:"";position:absolute;left:0;top:9px;width:9px;height:9px;border-radius:50%;background:var(--teal)}
+  @media (max-width:900px){.trust{grid-template-columns:1fr}}
+  .cmp{margin-top:22px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff}
+  .cmp .row{display:grid;grid-template-columns:150px repeat(4,1fr);border-top:1px solid var(--line)}
+  .cmp .row:first-child{border-top:0}
+  .cmp .row>div{padding:11px 12px;font-size:13px;line-height:1.55}
+  .cmp .row>div:first-child{font-weight:700;background:#F6F9F7;color:var(--ink)}
+  .cmp .hd>div{font-size:12.5px;color:var(--ink-3);font-weight:700;background:#F6F9F7}
+  .cmp .hd>div.b,.cmp .row>div.b{color:var(--teal-deep);font-weight:700;background:var(--teal-soft)}
+  .cmp .x{color:var(--ink-3)}
+  @media (max-width:800px){.cmp .row{grid-template-columns:1fr}.cmp .hd{display:none}.cmp .row>div:not(:first-child):before{content:attr(data-l);font-weight:700;color:var(--ink-3);font-size:11px;display:block;margin-bottom:1px}}
+
   /* steps: AI employees */
   .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:8px}
   .steps .s{position:relative;background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 16px 16px;display:flex;flex-direction:column;gap:6px}
@@ -320,7 +352,7 @@
       <span>IFbox<small>IDEAS FLOW TO A BETTER SOCIETY</small></span>
     </a>
     <div class="nav-links">
-      <a href="#act1">無理→もし</a><a href="#act2">“もし”の流通</a><a href="#act3">AI社員</a><a href="#act4">新しい当たり前</a><a href="#act5">価格</a><a href="#faq">Q&amp;A</a>
+      <a href="#act1">無理→もし</a><a href="#act2">“もし”の流通</a><a href="#scheme">仕組み</a><a href="#act3">AI社員</a><a href="#act4">新しい当たり前</a><a href="#act5">価格</a><a href="#faq">Q&amp;A</a>
       <a class="btn btn-primary" style="padding:9px 16px;font-size:13px" href="#post">“もし”を投稿する</a>
     </div>
   </div>
@@ -388,6 +420,37 @@
       <div class="p r"><svg viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="22" fill="#1E8F8F"/><ellipse cx="22" cy="15" rx="9" ry="3.5" fill="#fff"/><path d="M13 15v5c0 1.9 4 3.5 9 3.5s9-1.6 9-3.5v-5" fill="none" stroke="#fff" stroke-width="2"/><path d="M13 20v5c0 1.9 4 3.5 9 3.5s9-1.6 9-3.5v-5" fill="none" stroke="#fff" stroke-width="2"/><path d="M13 25v4c0 1.9 4 3.5 9 3.5s9-1.6 9-3.5v-4" fill="none" stroke="#fff" stroke-width="2"/></svg><div><h3>資金を届ける</h3><b>出資者・支援者</b><span>「この挑戦を支えたい」</span></div></div>
     </div>
     <div class="concl"><div class="ct">思いつきと挑戦が集まるほど、実現の機会が増える</div><p>投稿・共有、閲覧・共感、事業化への名乗り、掲載・提案。<br><span class="y">“もし”が流通する入口は、すべて無料です。</span></p><p class="s">出資の募集と契約は、登録事業者との連携を前提に設計しています。IFboxが自ら資金を預かることはありません。</p></div>
+  </section>
+
+  <section class="card" id="scheme">
+    <svg class="logo" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 6a14 14 0 0 1 12.1 7" fill="none" stroke="#1E8F8F" stroke-width="3" stroke-linecap="round"/><path d="M33 25a14 14 0 0 1-13 9" fill="none" stroke="#1B3358" stroke-width="3" stroke-linecap="round"/><path d="M7 26a14 14 0 0 1 1-13" fill="none" stroke="#B08A3E" stroke-width="3" stroke-linecap="round"/><circle cx="20" cy="6" r="4.2" fill="#1E8F8F"/><circle cx="33.5" cy="26" r="4.2" fill="#1B3358"/><circle cx="6.5" cy="26" r="4.2" fill="#B08A3E"/></svg>
+    <div><span class="pill"><b>02</b><span>スキーム</span></span><span class="kicker gold">“もし”が実現するまで</span></div>
+    <h2 class="t">投稿から実現、運営まで。<br>“もし”が事業になる7つのステップ</h2>
+    <p class="lead">アイデアは、共感・実行力・資金の3つがそろって初めて動きます。ところが今は、資金はクラウドファンディング、評価はコンテスト、担い手は求人サイトと、入口がばらばらです。<b>IFboxは、投稿から実現・運営までを一つの流れにし、各ステップで誰が何をするかを決めておく</b>ことで、思いつきが途中で消えない仕組みにします。</p>
+    <div class="scheme">
+      <div class="s free"><h3>投稿する</h3><p>「もしできたら」を、整っていないまま出す。無料。</p><span class="who">投稿者</span></div>
+      <div class="s free"><h3>整理し、共感を集める</h3><p>AI社員が似た“もし”をまとめ、共感数と困りごとで需要を可視化。</p><span class="who">AI社員・応援者</span></div>
+      <div class="s free"><h3>名乗りを上げる</h3><p>需要が見えた“もし”に「私が事業化します」と手を挙げる。無料。</p><span class="who">実行者</span></div>
+      <div class="s"><h3>実証する</h3><p>小さく試し、役立つか・負担が減るか・続くかを当事者と検証。事業計画に整える。</p><span class="who">実行者・AI社員</span></div>
+      <div class="s"><h3>資金を集める</h3><p>募集資料はAI社員が準備。募集・契約は登録事業者と連携。出資金は手数料の対象外。</p><span class="who gold">出資者・登録事業者</span></div>
+      <div class="s pay"><h3>契約し、実現する</h3><p>取引が成立。受注側が初年度契約金額の20%（検討中）を手数料として負担。</p><span class="who gold">受注側 → IFbox</span></div>
+      <div class="s"><h3>運営し、実績を残す</h3><p>発注・進行・検収・精算をAI社員が管理（希望者）。実績が公開され、次の“もし”を呼ぶ。</p><span class="who">事業オーナー・AI社員</span></div>
+    </div>
+    <p class="note" style="margin-top:12px">緑枠の1〜3は無料。費用が発生するのは、6の契約成立時（受注側のみ）と、7で運営サービスを希望する場合だけです。</p>
+    <div class="trust">
+      <div class="t"><h3>投稿者が、安心して出せる</h3><ul><li>投稿・共有は無料。後から料金や持分を求められない</li><li>投稿日時と内容が記録され、発想の出所が残る</li><li>実行者が現れても、関わり方は投稿者本人が選ぶ</li></ul></div>
+      <div class="t"><h3>実行者が、安心して引き受けられる</h3><ul><li>需要（共感・困りごと）が見えてから動ける</li><li>費用は取引が成立したときだけ。実証までは無料</li><li>発注・検収・精算はAI社員が管理し、記録が残る</li></ul></div>
+      <div class="t"><h3>出資者が、安心して支えられる</h3><ul><li>出資金はIFboxの手数料の対象外。IFboxは資金を預からない</li><li>募集・契約は登録事業者との連携を前提に設計</li><li>実証の結果と運営の収支が、継続して見える</li></ul></div>
+    </div>
+    <div class="cmp">
+      <div class="row hd"><div>既存の仕組みとの違い</div><div>クラウドファンディング</div><div>ビジネスコンテスト</div><div>求人・業務委託サイト</div><div class="b">IFbox</div></div>
+      <div class="row"><div>集まるもの</div><div class="x" data-l="クラウドファンディング">資金</div><div class="x" data-l="ビジネスコンテスト">評価・賞金</div><div class="x" data-l="求人・業務委託サイト">担い手</div><div class="b" data-l="IFbox">共感・実行力・資金の3つ</div></div>
+      <div class="row"><div>始める条件</div><div class="x" data-l="クラウドファンディング">計画と返礼が必要</div><div class="x" data-l="ビジネスコンテスト">事業計画書が必要</div><div class="x" data-l="求人・業務委託サイト">発注内容が決まっている</div><div class="b" data-l="IFbox">思いつきのままでよい</div></div>
+      <div class="row"><div>アイデアがない人</div><div class="x" data-l="クラウドファンディング">支援のみ</div><div class="x" data-l="ビジネスコンテスト">参加できない</div><div class="x" data-l="求人・業務委託サイト">受注のみ</div><div class="b" data-l="IFbox">実行者・応援者・出資者として参加</div></div>
+      <div class="row"><div>費用が発生するとき</div><div class="x" data-l="クラウドファンディング">達成時に手数料</div><div class="x" data-l="ビジネスコンテスト">無料または参加費</div><div class="x" data-l="求人・業務委託サイト">掲載時・成約時</div><div class="b" data-l="IFbox">取引成立時に受注側のみ</div></div>
+      <div class="row"><div>実現した後の運営</div><div class="x" data-l="クラウドファンディング">本人任せ</div><div class="x" data-l="ビジネスコンテスト">本人任せ</div><div class="x" data-l="求人・業務委託サイト">本人任せ</div><div class="b" data-l="IFbox">AI社員が運営を支援（希望者）</div></div>
+    </div>
+    <div class="concl"><div class="ct">世の中に必要な理由</div><p>思いつきを持つ人と、面白がる人、動かせる人、支えられる人は、別々の場所にいます。<br><span class="y">その4者を、投稿から運営までの一つの流れでつなぐ場所が、これまでありませんでした。</span></p><p class="s">IFboxはその流れを一つの基盤に置き、日常の運営をAI社員に任せることで、小さな“もし”でも採算が合う形で回し続けます。</p></div>
   </section>
 </div>
 
