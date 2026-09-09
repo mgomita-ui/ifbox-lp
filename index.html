@@ -327,12 +327,14 @@
   #story .story hr{background:var(--gold);opacity:1}
   /* story */
   #story .logo{display:none}
-  .story{margin:8px auto 0;max-width:37em;padding:0 8px}
-  .story p{font-size:17px;line-height:2.15;color:var(--ink-2);margin:0 0 24px}
+  /* 文章の幅に合わせてカード自体を狭める（幅の広い画面で細い帯に見えるのを防ぐ） */
+  #story{max-width:900px;margin-left:auto;margin-right:auto;padding:56px 60px 52px}
+  .story{margin:6px auto 0;max-width:100%;padding:0}
+  .story p{font-size:18.5px;line-height:2.15;color:var(--ink-2);margin:0 0 24px}
   .story p b{color:var(--ink);font-weight:700}
-  .story p.big{font-size:clamp(19px,1.7vw,23px);font-weight:900;color:var(--navy);line-height:1.85;margin-bottom:26px}
+  .story p.big{font-size:clamp(20px,1.8vw,26px);font-weight:900;color:var(--navy);line-height:1.85;margin-bottom:26px}
   .story hr{border:0;height:1px;background:var(--gold);margin:34px auto 30px;width:56px;opacity:.7}
-  @media (max-width:700px){.story{padding:0}.story p{font-size:15.5px;line-height:2}.story p br{display:none}}
+  @media (max-width:700px){#story{padding:36px 22px 36px}.story{padding:0}.story p{font-size:15.5px;line-height:2}.story p br{display:none}}
 
   /* demo : 1枚の案件カードが積み上がる */
   .demo{margin-top:26px}
