@@ -318,64 +318,6 @@
   .notes div{padding-left:12px;border-left:2px solid var(--line)}
   @media (max-width:800px){.notes{grid-template-columns:1fr}}
 
-  /* story : ページ内で唯一の反転面。単調さを断ち切る転換点 */
-  #story{background:var(--navy);color:#fff;box-shadow:0 18px 44px rgba(14,42,91,.28)}
-  #story .eb{color:var(--gold)}
-  #story .story p{color:rgba(255,255,255,.86)}
-  #story .story p b{color:#fff}
-  #story .story p.big{color:#fff}
-  #story .story hr{background:var(--gold);opacity:1}
-  /* story */
-  #story .logo{display:none}
-  /* 文章の幅に合わせてカード自体を狭める（幅の広い画面で細い帯に見えるのを防ぐ） */
-  #story{max-width:900px;margin-left:auto;margin-right:auto;padding:56px 60px 52px}
-  .story{margin:6px auto 0;max-width:100%;padding:0}
-  .story p{font-size:18.5px;line-height:2.15;color:var(--ink-2);margin:0 0 24px}
-  .story p b{color:var(--ink);font-weight:700}
-  .story p.big{font-size:clamp(20px,1.8vw,26px);font-weight:900;color:var(--navy);line-height:1.85;margin-bottom:26px}
-  .story hr{border:0;height:1px;background:var(--gold);margin:34px auto 30px;width:56px;opacity:.7}
-  @media (max-width:700px){#story{padding:36px 22px 36px}.story{padding:0}.story p{font-size:15.5px;line-height:2}.story p br{display:none}}
-
-  /* demo : 1枚の案件カードが積み上がる */
-  .demo{margin-top:26px}
-  .demo .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:18px}
-  .demo .steps button{font:inherit;text-align:left;cursor:pointer;background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:12px 14px;transition:border-color .18s,background .18s}
-  .demo .steps button .n{display:block;font-family:var(--latin);font-size:11.5px;font-weight:600;letter-spacing:.12em;color:var(--ink-3)}
-  .demo .steps button .t{display:block;font-size:15.5px;font-weight:900;color:var(--ink-3);margin-top:2px}
-  .demo .steps button[aria-selected="true"]{border-color:var(--gold);background:var(--gold-soft)}
-  .demo .steps button[aria-selected="true"] .n{color:var(--gold-deep)}
-  .demo .steps button[aria-selected="true"] .t{color:var(--navy)}
-  .demo .steps button:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
-  .demo .board{border:1px solid var(--line);border-radius:14px;background:#fff;overflow:hidden}
-  .demo .board .hd{background:var(--navy);color:#fff;padding:14px 20px;font-size:13px;font-weight:700;display:flex;align-items:center;gap:10px}
-  .demo .board .hd:before{content:"";width:9px;height:9px;border-radius:50%;background:var(--gold);flex:none}
-  .demo .board .body{padding:6px 20px 18px}
-  @keyframes demoIn{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}
-  .demo .row{display:none;grid-template-columns:104px 1fr;gap:16px;padding:16px 0;border-bottom:1px dashed var(--line)}
-  .demo .row.on{display:grid;animation:demoIn .45s ease both}
-  .demo .row.on:last-of-type{border-bottom:0}
-  .demo .row .who{font-size:12.5px;font-weight:700;color:var(--gold-deep);background:var(--gold-soft);border-radius:6px;padding:5px 8px;height:max-content;text-align:center;line-height:1.5}
-  .demo .row .say{font-size:15.5px;font-weight:700;color:var(--navy);line-height:1.6}
-  .demo .row .did{font-size:13.5px;color:var(--ink-2);margin-top:3px;line-height:1.7}
-  .demo .row.seed .who{color:var(--navy);background:var(--navy-soft)}
-  .demo .split{display:none;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
-  .demo .split.on{display:grid;animation:demoIn .45s ease both}
-  .demo .split .s{background:var(--navy);color:#fff;border-radius:10px;padding:12px 14px;text-align:center}
-  .demo .split .s b{display:block;font-family:var(--latin);font-size:21px;font-weight:700;color:var(--gold)}
-  .demo .split .s span{font-size:12px;color:rgba(255,255,255,.82);line-height:1.5;display:block;margin-top:2px}
-  .demo .foot{display:none;padding:14px 20px 0;border-top:1px solid var(--line);margin-top:16px;font-size:13px;color:var(--ink-3);line-height:1.7}
-  .demo .foot.on{display:block;animation:demoIn .45s ease both}
-  .demo .exp{margin-top:16px;font-size:14.5px;color:var(--ink-2);line-height:1.9}
-  .demo .exp b{color:var(--ink)}
-  @media (max-width:760px){
-    .demo .steps{grid-template-columns:1fr}
-    .demo .row.on{grid-template-columns:1fr;gap:6px;padding:14px 0}
-    .demo .row .who{width:max-content}
-    .demo .split{grid-template-columns:1fr}
-    .demo .exp{min-height:0}
-  }
-  @media (prefers-reduced-motion:reduce){.demo .row.on,.demo .split.on,.demo .foot.on{animation:none}}
-
   /* split : AIが裁いて分ける */
   .split3{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:20px}
   .split3 .c{border:1px solid var(--line);border-radius:12px;padding:20px 22px;background:#fff}
@@ -451,7 +393,7 @@
       <span>IFbox<small>IDEAS FLOW TO A BETTER SOCIETY</small></span>
     </a>
     <div class="nav-links">
-      <a href="#story">なぜ今</a><a href="#scheme">しくみ</a><a href="#split">分け方</a><a href="#act3">運営</a><a href="#act5">価格</a><a href="#faq">Q&amp;A</a>
+      <a href="#scheme">しくみ</a><a href="#split">分け方</a><a href="#act3">運営</a><a href="#act5">価格</a><a href="#faq">Q&amp;A</a>
       <a class="btn btn-primary" style="padding:9px 16px;font-size:13px" href="#post">“もし”を投稿する</a>
     </div>
   </div>
@@ -498,35 +440,6 @@
     </div>
   </div>
 </header>
-
-<!-- 序章：物語 -->
-<div class="page">
-  <section class="card" id="story">
-    <svg class="logo" viewBox="0 0 40 40" aria-hidden="true"><rect x="2.5" y="2.5" width="35" height="35" rx="9.5" fill="#F6A623"/><circle cx="8.6" cy="8.6" r="2.1" fill="#0E2A5B"/><circle cx="31.4" cy="8.6" r="2.1" fill="#0E2A5B"/><circle cx="8.6" cy="31.4" r="2.1" fill="#0E2A5B"/><circle cx="31.4" cy="31.4" r="2.1" fill="#0E2A5B"/><rect x="12.1" y="11" width="5.3" height="18" rx="2.3" fill="#FFFFFF"/><rect x="20.5" y="11" width="5.3" height="18" rx="2.3" fill="#FFFFFF"/><rect x="20.5" y="11" width="8.8" height="5.3" rx="2.3" fill="#FFFFFF"/><rect x="20.5" y="18.7" width="6.7" height="4.9" rx="2.2" fill="#FFFFFF"/></svg>
-    <p class="eb" style="text-align:center">Why now</p>
-    <div class="story">
-      <p>「もし、こうだったら」と願いを口にすることで、<br>その願いが叶う道具があれば、<br>たいていの社会課題は解けます。</p>
-      <p>現実には、そんな道具はありません。</p>
-      <p class="big">いや——なかった、というべきかもしれません。</p>
-      <hr>
-      <p>ほとんどの願いは、<br>不可能だから叶わないのではありません。<br><b>叶えられる人と、出会えなかっただけです。</b></p>
-      <p>世界のどこかに、それを作れる人がいます。<br>欲しいと思っている人も、<br>売り方を知っている人も、<br>お金を出せる人もいます。</p>
-      <p>何が足りないかは、願いによって違います。<br>けれどどの願いも、<br>その相手と出会う方法がありませんでした。</p>
-      <hr>
-      <p>2022年、ChatGPTが公開されました。<br>そこからのAIの進化は、ご存じのとおりです。</p>
-      <p>「もし、こうだったら」を形にすることは、<br>驚くほど簡単になりました。<br>思いついたその日に、動くものが作れます。</p>
-      <p><b>けれど、簡単になったのは、そこだけでした。</b></p>
-      <p>一緒にやる仲間は、AIが連れてきてはくれません。<br>資金も、AIは出してくれません。<br>誰に、どう届けるのかも、決まらないままです。</p>
-      <p class="big">作れるようになったのに、<br>作ったあとが、変わっていない。</p>
-      <hr>
-      <p><b>足りないのは、作る力ではありませんでした。<br>出会う仕組みです。</b></p>
-      <p>だから私たちは、AIを、<br>作るためではなく、出会わせるために使います。</p>
-      <p>願いを聞き取り、似た願いをまとめ、<br>足りないものを持っている人を見つけて、<br>引き合わせる。</p>
-      <p><b>叶えるのは、人です。<br>AIは、出会わせる側にまわります。</b></p>
-      <p class="big">IFboxは、そのための箱です。</p>
-    </div>
-  </section>
-</div>
 
 <!-- 02：もしの流通をつくる -->
 <div class="chap" id="act2">
