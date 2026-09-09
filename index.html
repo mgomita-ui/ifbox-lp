@@ -327,16 +327,6 @@
   form.cf .ok a{color:var(--teal-deep)}
   @media (max-width:900px){.final .in{grid-template-columns:1fr;padding:36px 24px;gap:28px}form.cf .row{grid-template-columns:1fr}}
 
-  /* opening video player */
-  .vplayer{position:fixed;inset:0;z-index:100;background:rgba(7,21,47,.96);display:none;align-items:center;justify-content:center;padding:24px}
-  .vplayer.on{display:flex}
-  .vplayer .box{position:relative;width:min(1160px,100%);border-radius:14px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.55);background:#07152F}
-  .vplayer video{display:block;width:100%;height:auto;background:#07152F}
-  .vplayer .bar{position:absolute;top:14px;right:14px;display:flex;gap:8px}
-  .vplayer .bar button{font:inherit;font-size:13px;font-weight:700;color:#fff;background:rgba(7,21,47,.6);border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:7px 14px;cursor:pointer;line-height:1}
-  .vplayer .bar button:hover{background:rgba(246,166,35,.9);color:#0E2A5B;border-color:transparent}
-  .vplayer .bar button:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
-  @media (max-width:700px){.vplayer{padding:12px}.vplayer .bar{top:8px;right:8px}.vplayer .bar button{font-size:12px;padding:6px 10px}}
 
   .pp h3{font-size:16px;font-weight:700;color:var(--navy);margin:22px 0 6px;padding-left:12px;border-left:3px solid var(--teal)}
   .pp p,.pp ul{font-size:14.5px;color:var(--ink-2);max-width:60em}
@@ -375,7 +365,6 @@
       <p class="sub">思いつきに、共感・実行力・資金が巡るプラットフォーム。「もしできたら、面白くない？」を投稿するだけで、応援する人、事業化する人、支える人がつながります。夢と目標の違いは、計画性と具体性。AIは夢を目標に変え、使命を行動に変える。IFboxは、そのお手伝いをします。</p>
       <div class="cta">
         <a class="btn btn-teal" href="#post">“もし”を投稿する <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
-        <button type="button" class="btn btn-ghost on-dark" id="playOpening" aria-haspopup="dialog">▶ 70秒の映像で見る</button>
         <a class="btn btn-ghost on-dark" href="#act5">価格を見る</a>
       </div>
       <div class="proof"><span>投稿・閲覧・名乗りは無料</span><span>アイデアがなくても参加できる</span><span>費用は、取引が成立したときだけ</span></div>
@@ -677,36 +666,6 @@
 </footer>
 
 <div class="ribbon rb-br" aria-hidden="true" style="position:absolute;bottom:0"><svg viewBox="0 0 640 420"><path d="M680 360 C520 440 380 380 310 280 C240 180 310 40 520 0 L680 0Z" fill="#2E5A9E" opacity=".8"/><path d="M680 280 C550 360 430 320 390 230 C350 140 420 40 580 0 L680 0Z" fill="#0E2A5B" opacity=".9"/></svg></div>
-
-<div class="vplayer" id="vplayer" role="dialog" aria-modal="true" aria-label="IFbox オープニング映像">
-  <div class="box">
-    <video id="vop" playsinline preload="none" poster="media/opening-poster.jpg" src="media/opening.mp4"></video>
-    <div class="bar">
-      <button type="button" id="vmute">音楽 OFF</button>
-      <button type="button" id="vclose">閉じる ✕</button>
-    </div>
-  </div>
-</div>
-
-<script>
-  (function(){
-    var b=document.getElementById('playOpening'),p=document.getElementById('vplayer'),
-        v=document.getElementById('vop'),mu=document.getElementById('vmute'),cl=document.getElementById('vclose');
-    if(!b||!p||!v)return;
-    var last=null;
-    function open(){last=document.activeElement;p.classList.add('on');document.body.style.overflow='hidden';
-      v.currentTime=0;v.muted=false;mu.textContent='音楽 OFF';
-      var q=v.play();if(q&&q.catch)q.catch(function(){v.muted=true;mu.textContent='音楽 ON';v.play();});
-      cl.focus();}
-    function close(){p.classList.remove('on');document.body.style.overflow='';v.pause();if(last)last.focus();}
-    b.addEventListener('click',open);
-    cl.addEventListener('click',close);
-    p.addEventListener('click',function(e){if(e.target===p)close();});
-    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&p.classList.contains('on'))close();});
-    mu.addEventListener('click',function(){v.muted=!v.muted;mu.textContent=v.muted?'音楽 ON':'音楽 OFF';});
-    v.addEventListener('ended',close);
-  })();
-</script>
 
 <script>
   (function(){
