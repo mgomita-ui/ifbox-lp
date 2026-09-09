@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>夢を目標に。使命を行動に。｜IFbox</title>
-<meta name="description" content="世の中から無理をなくし、“もし”の流通を司る。思いつきに、共感・実行力・資金が巡るプラットフォーム IFbox。">
+<title>作るのは、もうひとりじゃない。｜IFbox</title>
+<meta name="description" content="AIで、作るのは簡単になった。変わらないのは、そのあと。仲間も資金も売り方も揃わない。IFboxは、その残りを埋める場所です。">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="IFbox">
 <meta property="og:locale" content="ja_JP">
-<meta property="og:title" content="夢を目標に変える｜IFbox ― 世の中から無理をなくし、“もし”の流通を司る。">
-<meta property="og:description" content="思いつきに、共感・実行力・資金が巡るプラットフォーム。AI社員が事業化と運営を支える。入口は無料、費用は実現したときだけ。">
+<meta property="og:title" content="作るのは、もうひとりじゃない。｜IFbox">
+<meta property="og:description" content="AIで、作るのは簡単になった。変わらないのは、そのあと。仲間も資金も売り方も揃わない。IFboxは、その残りを埋める場所です。">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Poppins:wght@500;600;700&display=swap">
 <style>
@@ -294,7 +294,38 @@
   .notes div{padding-left:12px;border-left:2px solid var(--line)}
   @media (max-width:800px){.notes{grid-template-columns:1fr}}
 
-  /* faq */
+  /* story */
+  .story{margin-top:20px;max-width:34em}
+  .story p{font-size:17px;line-height:2.1;color:var(--ink-2);margin:0 0 22px}
+  .story p b{color:var(--ink);font-weight:700}
+  .story p.big{font-size:clamp(20px,2.4vw,25px);font-weight:900;color:var(--navy);line-height:1.8}
+  .story hr{border:0;height:1px;background:var(--line);margin:30px 0 26px;width:70px}
+  @media (max-width:700px){.story p{font-size:15.5px;line-height:2}.story p br{display:none}}
+
+  /* split : AIが裁いて分ける */
+  .split3{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:20px}
+  .split3 .c{border:1px solid var(--line);border-radius:12px;padding:20px 22px;background:#fff}
+  .split3 .c .k{font-family:var(--latin);font-size:12px;font-weight:600;letter-spacing:.12em;color:var(--gold-deep)}
+  .split3 .c h3{font-size:18px;font-weight:900;color:var(--navy);margin:4px 0 6px}
+  .split3 .c p{font-size:14px;color:var(--ink-2);line-height:1.8}
+  @media (max-width:760px){.split3{grid-template-columns:1fr}}
+  .facts{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:8px}
+  .facts .f{border-radius:10px;padding:18px 20px;background:var(--navy);color:#fff}
+  .facts .f .n{font-family:var(--latin);font-size:12px;letter-spacing:.12em;color:var(--gold);font-weight:600}
+  .facts .f b{display:block;font-size:18px;font-weight:900;margin:4px 0 4px}
+  .facts .f span{font-size:13.5px;color:rgba(255,255,255,.82);line-height:1.75}
+  @media (max-width:700px){.facts{grid-template-columns:1fr}}
+  .trustlist{display:grid;gap:10px;margin-top:8px}
+  .trustlist .t{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start;border-left:3px solid var(--gold);background:var(--gold-soft);border-radius:0 10px 10px 0;padding:14px 18px}
+  .trustlist .t .q{font-weight:900;font-size:14.5px;color:var(--gold-deep);white-space:nowrap}
+  .trustlist .t p{font-size:14px;color:var(--ink-2);line-height:1.8}
+  @media (max-width:640px){.trustlist .t{grid-template-columns:1fr;gap:4px}}
+  .exbox{border:2px dashed var(--line);border-radius:12px;padding:20px 24px;margin-top:22px;background:#F8FAFB}
+  .exbox .tag{display:inline-block;font-size:11.5px;font-weight:700;color:var(--ink-3);background:#fff;border:1px solid var(--line);border-radius:999px;padding:2px 10px;margin-bottom:8px}
+  .exbox h4{font-size:16.5px;font-weight:900;color:var(--navy);margin-bottom:6px}
+  .exbox p{font-size:14.5px;color:var(--ink-2);line-height:1.85}
+
+  /* faq
   .faq details{border-bottom:1px solid var(--line)}
   .faq summary{cursor:pointer;list-style:none;padding:18px 0;display:flex;gap:14px;align-items:flex-start;font-weight:700;font-size:16.5px}
   .faq summary::-webkit-details-marker{display:none}
@@ -347,7 +378,7 @@
       <span>IFbox<small>IDEAS FLOW TO A BETTER SOCIETY</small></span>
     </a>
     <div class="nav-links">
-      <a href="#act1">無理→もし</a><a href="#act2">“もし”の流通</a><a href="#scheme">仕組み</a><a href="#act3">AI社員</a><a href="#act4">新しい当たり前</a><a href="#act5">価格</a><a href="#faq">Q&amp;A</a>
+      <a href="#story">なぜ今</a><a href="#scheme">しくみ</a><a href="#split">分け方</a><a href="#act3">運営</a><a href="#act5">価格</a><a href="#faq">Q&amp;A</a>
       <a class="btn btn-primary" style="padding:9px 16px;font-size:13px" href="#post">“もし”を投稿する</a>
     </div>
   </div>
@@ -360,51 +391,61 @@
     <div class="grid" aria-hidden="true"></div>
     <div class="txt">
       <p class="eb">IFbox ｜ Ideas flow to a better society</p>
-      <p class="qq">夢を目標に。使命を行動に。IFbox。</p>
-      <h1><span class="nw">世の中から<em>無理</em>をなくし、</span><br><span class="nw">“もし”の流通を司る。</span></h1>
-      <p class="sub">思いつきに、共感・実行力・資金が巡るプラットフォーム。「もしできたら、面白くない？」を投稿するだけで、応援する人、事業化する人、支える人がつながります。夢と目標の違いは、計画性と具体性。AIは夢を目標に変え、使命を行動に変える。IFboxは、そのお手伝いをします。</p>
+      <p class="qq">夜と週末に、何か作っている人へ。</p>
+      <h1><span class="nw">作るのは、もう<em>ひとりじゃない</em>。</span></h1>
+      <p class="sub">AIのおかげで、思いついたその日に動くものが作れるようになりました。でも、一緒にやる仲間も、資金も、売り方も、AIは連れてきてくれません。IFboxは、その残りを埋める場所です。<b>「もし、こんなのがあれば」を置いておくと、面白がった人が乗ってきます。</b></p>
       <div class="cta">
-        <a class="btn btn-teal" href="#post">“もし”を投稿する <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
-        <a class="btn btn-ghost on-dark" href="#act5">価格を見る</a>
+        <a class="btn btn-teal" href="#post">“もし”を置いてみる <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+        <a class="btn btn-ghost on-dark" href="#split">どう分けるのか</a>
       </div>
-      <div class="proof"><span>投稿・閲覧・名乗りは無料</span><span>アイデアがなくても参加できる</span><span>費用は、取引が成立したときだけ</span></div>
+      <div class="proof"><span>置いておくだけ、無料</span><span>作れなくても、乗るだけで参加できる</span><span>お金の話は、売れてから</span></div>
       <p class="firm">IFbox<small>IDEAS FLOW TO A BETTER SOCIETY ｜ 2026年 ・ 設計案</small></p>
     </div>
     <div class="ladder" aria-hidden="true">
-      <div class="st s1"><b>NORMAL</b><span>当たり前</span><small>いつもの仕組み・慣習</small></div>
-      <div class="st s2"><b>REALITY</b><span>現実</span><small>負担・制約・眠る資源</small></div>
-      <div class="st s3"><i>ここから</i><b>IF</b><span>もし</span><small>もしできたら、面白くない？</small></div>
+      <div class="st s1"><b>IF</b><span>投げかける</span><small>もし、こんなのがあれば</small></div>
+      <div class="st s2"><b>MIX</b><span>合体させる</span><small>僕もこんなの作ってる</small></div>
+      <div class="st s3"><i>ここまで</i><b>SELL</b><span>売り方をつける</span><small>僕はこんな売り方できる</small></div>
     </div>
   </div>
 </header>
 
-<!-- 01：無理を、もしに変える -->
-<div class="chap" id="act1">
-  <div class="in"><div class="l"><div class="lab">CHAP.</div><div class="n">01</div><h2>“無理”を、“もし”に変える</h2><p>当たり前と現実に問いを立て、別の可能性を共有する。<br><b>「どうせ」「普通は」の先に、もう一つの答えを置くところから始まります。</b></p></div></div>
-</div>
+<!-- 序章：物語 -->
 <div class="page">
-  <section class="card">
+  <section class="card" id="story">
     <svg class="logo" viewBox="0 0 40 40" aria-hidden="true"><rect x="2.5" y="2.5" width="35" height="35" rx="9.5" fill="#F6A623"/><circle cx="8.6" cy="8.6" r="2.1" fill="#0E2A5B"/><circle cx="31.4" cy="8.6" r="2.1" fill="#0E2A5B"/><circle cx="8.6" cy="31.4" r="2.1" fill="#0E2A5B"/><circle cx="31.4" cy="31.4" r="2.1" fill="#0E2A5B"/><rect x="12.1" y="11" width="5.3" height="18" rx="2.3" fill="#FFFFFF"/><rect x="20.5" y="11" width="5.3" height="18" rx="2.3" fill="#FFFFFF"/><rect x="20.5" y="11" width="8.8" height="5.3" rx="2.3" fill="#FFFFFF"/><rect x="20.5" y="18.7" width="6.7" height="4.9" rx="2.2" fill="#FFFFFF"/></svg>
-    <div><span class="pill"><b>01</b><span>無理 → もし</span></span><span class="kicker">当たり前に、問いを立てる</span></div>
-    <h2 class="t">「どうせ」「普通は」の先に、<br>別の可能性を置くのがIFboxです</h2>
-    <p class="lead">当たり前（NORMAL）は、いつもの仕組みや慣習です。現実（REALITY）には、負担・制約・眠っている資源があります。多くの思いつきは、この二つの間で「無理だ」と片づけられて消えていきます。<b>そこに「もしできたら、面白くない？」（IF）を置き、共有できる形にする。</b>それだけで、無理だと思われていたことが、誰かの挑戦の入口に変わります。</p>
-    <div class="flow" style="margin-top:26px">
-      <div class="col"><div class="lab">NORMAL ｜ 当たり前</div><div class="box"><div class="in"><svg viewBox="0 0 40 40" fill="#0E2A5B" aria-hidden="true"><rect x="5" y="5" width="8" height="8" rx="1.5"/><rect x="16" y="5" width="8" height="8" rx="1.5"/><rect x="27" y="5" width="8" height="8" rx="1.5"/><rect x="5" y="16" width="8" height="8" rx="1.5"/><rect x="16" y="16" width="8" height="8" rx="1.5"/><rect x="27" y="16" width="8" height="8" rx="1.5"/><rect x="5" y="27" width="8" height="8" rx="1.5"/><rect x="16" y="27" width="8" height="8" rx="1.5"/><rect x="27" y="27" width="8" height="8" rx="1.5"/></svg><h3>いつもの仕組み・慣習</h3><p>疑われないまま続いている前提。「そういうものだ」で止まっている。</p></div></div></div>
-      <div class="col"><div class="lab">REALITY ｜ 現実</div><div class="box re"><div class="in"><svg viewBox="0 0 40 40" fill="#0E2A5B" aria-hidden="true"><rect x="5" y="24" width="8" height="11" rx="1.5"/><rect x="16" y="15" width="8" height="20" rx="1.5"/><rect x="27" y="6" width="8" height="29" rx="1.5"/></svg><h3>負担・制約・眠る資源</h3><p>時間も人も足りない。一方で、使われていない場所・技術・経験が眠っている。</p></div></div></div>
-      <div class="col"><div class="lab goal">IF ｜ もし</div><div class="goalbox"><svg viewBox="0 0 40 40" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M20 4v3M31 8l-2 2M9 8l2 2M34 20h-3M6 20h3"/><path d="M14 26a8 8 0 1 1 12 0c-1.5 1.5-2 3-2 5h-8c0-2-.5-3.5-2-5z" fill="rgba(255,255,255,.15)"/><path d="M16 34h8"/></svg><h3>もしできたら、<br>面白くない？</h3><p>問いを立てて共有する。ここから、共感・実行力・資金が集まり始める。</p></div></div>
+    <p class="eb">Why now</p>
+    <div class="story">
+      <p>「もし、こうだったら」と願いを口にすることで、<br>その願いが叶う道具があれば、<br>たいていの社会課題は解けます。</p>
+      <p>現実には、そんな道具はありません。</p>
+      <p class="big">いや——なかった、というべきかもしれません。</p>
+      <hr>
+      <p>ほとんどの願いは、<br>不可能だから叶わないのではありません。<br><b>叶えられる人と、出会えなかっただけです。</b></p>
+      <p>世界のどこかに、それを作れる人がいます。<br>欲しいと思っている人も、<br>売り方を知っている人も、<br>お金を出せる人もいます。</p>
+      <p>何が足りないかは、願いによって違います。<br>けれどどの願いも、<br>その相手と出会う方法がありませんでした。</p>
+      <hr>
+      <p>2022年、ChatGPTが公開されました。<br>そこからのAIの進化は、ご存じのとおりです。</p>
+      <p>「もし、こうだったら」を形にすることは、<br>驚くほど簡単になりました。<br>思いついたその日に、動くものが作れます。</p>
+      <p><b>けれど、簡単になったのは、そこだけでした。</b></p>
+      <p>一緒にやる仲間は、AIが連れてきてはくれません。<br>資金も、AIは出してくれません。<br>誰に、どう届けるのかも、決まらないままです。</p>
+      <p class="big">作れるようになったのに、<br>作ったあとが、変わっていない。</p>
+      <hr>
+      <p><b>足りないのは、作る力ではありませんでした。<br>出会う仕組みです。</b></p>
+      <p>だから私たちは、AIを、<br>作るためではなく、出会わせるために使います。</p>
+      <p>願いを聞き取り、似た願いをまとめ、<br>足りないものを持っている人を見つけて、<br>引き合わせる。</p>
+      <p><b>叶えるのは、人です。<br>AIは、出会わせる側にまわります。</b></p>
+      <p class="big">IFboxは、そのための箱です。</p>
     </div>
-    <div class="concl"><div class="ct">無理は、まだ試されていないだけ</div><p>思いつきを持っている人と、それを面白がる人、動かせる人、支えられる人は、別の場所にいます。<br><span class="y">“もし”を流通させれば、その4者はつながります。</span></p></div>
   </section>
 </div>
 
 <!-- 02：もしの流通をつくる -->
 <div class="chap" id="act2">
-  <div class="in"><div class="l"><div class="lab">CHAP.</div><div class="n">02</div><h2>“もし”の流通をつくる</h2><p>多様な立場からの参加で、アイデアが動き出す。<br><b>発想・共感・実行力・資金。4つの入口が、一つの基盤でつながります。</b></p></div></div>
+  <div class="in"><div class="l"><div class="lab">CHAP.</div><div class="n">01</div><h2>“もし”の流通をつくる</h2><p>多様な立場からの参加で、アイデアが動き出す。<br><b>発想・共感・実行力・資金。4つの入口が、一つの基盤でつながります。</b></p></div></div>
 </div>
 <div class="page">
   <section class="card">
     <svg class="logo" viewBox="0 0 40 40" aria-hidden="true"><rect x="2.5" y="2.5" width="35" height="35" rx="9.5" fill="#F6A623"/><circle cx="8.6" cy="8.6" r="2.1" fill="#0E2A5B"/><circle cx="31.4" cy="8.6" r="2.1" fill="#0E2A5B"/><circle cx="8.6" cy="31.4" r="2.1" fill="#0E2A5B"/><circle cx="31.4" cy="31.4" r="2.1" fill="#0E2A5B"/><rect x="12.1" y="11" width="5.3" height="18" rx="2.3" fill="#FFFFFF"/><rect x="20.5" y="11" width="5.3" height="18" rx="2.3" fill="#FFFFFF"/><rect x="20.5" y="11" width="8.8" height="5.3" rx="2.3" fill="#FFFFFF"/><rect x="20.5" y="18.7" width="6.7" height="4.9" rx="2.2" fill="#FFFFFF"/></svg>
-    <div><span class="pill"><b>02</b><span>“もし”の流通</span></span><span class="kicker gold">アイデアがなくても、参加できる</span></div>
+    <div><span class="pill"><b>01</b><span>“もし”の流通</span></span><span class="kicker gold">アイデアがなくても、参加できる</span></div>
     <h2 class="t">発想がなくても、<br>実現する側として参加できます</h2>
     <p class="lead">IFboxは、アイデアを持つ人だけの場所ではありません。「面白い」「使ってみたい」と言う人、「私が事業化します」と名乗る人、「この挑戦を支えたい」と資金を出す人。<b>4つの立場が同じ基盤の上でつながることで、一人では止まっていた思いつきが動き出します。</b></p>
     <div class="hub" style="margin-top:26px">
@@ -419,7 +460,7 @@
 
   <section class="card" id="scheme">
     <svg class="logo" viewBox="0 0 40 40" aria-hidden="true"><rect x="2.5" y="2.5" width="35" height="35" rx="9.5" fill="#F6A623"/><circle cx="8.6" cy="8.6" r="2.1" fill="#0E2A5B"/><circle cx="31.4" cy="8.6" r="2.1" fill="#0E2A5B"/><circle cx="8.6" cy="31.4" r="2.1" fill="#0E2A5B"/><circle cx="31.4" cy="31.4" r="2.1" fill="#0E2A5B"/><rect x="12.1" y="11" width="5.3" height="18" rx="2.3" fill="#FFFFFF"/><rect x="20.5" y="11" width="5.3" height="18" rx="2.3" fill="#FFFFFF"/><rect x="20.5" y="11" width="8.8" height="5.3" rx="2.3" fill="#FFFFFF"/><rect x="20.5" y="18.7" width="6.7" height="4.9" rx="2.2" fill="#FFFFFF"/></svg>
-    <div><span class="pill"><b>02</b><span>しくみ</span></span><span class="kicker gold">“もし”が実現するまで</span></div>
+    <div><span class="pill"><b>01</b><span>しくみ</span></span><span class="kicker gold">“もし”が実現するまで</span></div>
     <h2 class="t">投げかける。合体させる。<br>売り方をつける。</h2>
     <p class="lead">投稿箱ではありません。誰かの「もし」に、別の誰かの「作ってる」が合わさり、さらに別の誰かの「売れる」が乗る。<b>この3つがそろうと、思いつきは事業になります。</b>IFboxは、その3つが出会う場所です。</p>
     <div class="scheme">
@@ -453,13 +494,48 @@
 </div>
 
 <!-- 03：AI社員 -->
+<div class="chap" id="split">
+  <div class="in"><div class="l"><div class="lab">CHAP.</div><div class="n">02</div><h2>AIが裁いて、分ける</h2><p>みんなで作ると、必ず「誰がどれだけ？」が起きます。<br><b>IFboxがいちばん時間をかけているのは、ここです。</b></p></div></div>
+</div>
+<div class="page">
+  <section class="card">
+    <svg class="logo" viewBox="0 0 40 40" aria-hidden="true"><rect x="2.5" y="2.5" width="35" height="35" rx="9.5" fill="#F6A623"/><circle cx="8.6" cy="8.6" r="2.1" fill="#0E2A5B"/><circle cx="31.4" cy="8.6" r="2.1" fill="#0E2A5B"/><circle cx="8.6" cy="31.4" r="2.1" fill="#0E2A5B"/><circle cx="31.4" cy="31.4" r="2.1" fill="#0E2A5B"/><rect x="12.1" y="11" width="5.3" height="18" rx="2.3" fill="#FFFFFF"/><rect x="20.5" y="11" width="5.3" height="18" rx="2.3" fill="#FFFFFF"/><rect x="20.5" y="11" width="8.8" height="5.3" rx="2.3" fill="#FFFFFF"/><rect x="20.5" y="18.7" width="6.7" height="4.9" rx="2.2" fill="#FFFFFF"/></svg>
+    <div><span class="pill"><b>02</b><span>分け方</span></span><span class="kicker gold">投票では、決めません</span></div>
+    <h2 class="t">人気投票にしないために、<br>動かせない事実だけを使います</h2>
+    <p class="lead">何人かで作ると、必ず「誰がどれだけ貢献したか」という問いが出ます。話し合いで決めると、声の大きい人と、目立つ仕事が得をします。<b>地味で欠かせない仕事ほど、沈みます。</b>だからIFboxは、話し合いでも投票でもなく、後から動かせない2つの事実から配分を出します。</p>
+    <div class="facts">
+      <div class="f"><span class="n">FACT 01</span><b>実際に売れた金額</b><span>見込みでも評価額でもなく、実際に入ってきた額。ここから分けます。</span></div>
+      <div class="f"><span class="n">FACT 02</span><b>誰が何をしたかの記録</b><span>いつ、誰が、何を出して、それが採用されたか。作業のたびに残ります。</span></div>
+    </div>
+    <p class="lead" style="margin-top:22px">この2つは、あとから言い方を変えられません。<b>だから、人気ではなく結果に紐づきます。</b></p>
+
+    <h3 style="font-size:19px;font-weight:900;color:var(--navy);margin:30px 0 4px;padding-left:12px;border-left:4px solid var(--gold)">それでも、不安だと思います</h3>
+    <div class="trustlist">
+      <div class="t"><span class="q">勝手に決められる？</span><p>いいえ。<b>はじめのうち、AIは案を出すだけです。</b>最終的な配分は、関わった人が合意して確定します。判断の材料が十分に溜まるまで、AIは決定者ではなく提案者です。</p></div>
+      <div class="t"><span class="q">文句は言える？</span><p>言えます。<b>確定の前に、7日間の異議期間を置きます。</b>記録の漏れや取り違えを示していただければ、別の手順で計算し直します。</p></div>
+      <div class="t"><span class="q">理由は分かる？</span><p>分かります。どの記録を使い、何をどう重く見て、いくらになったのか。<b>根拠が足りない箇所も含めてお見せします。</b></p></div>
+      <div class="t"><span class="q">IFboxが自分の取り分を多くしない？</span><p>できない設計にします。<b>IFboxの取り分は、AIではなく、先に決めて公開したルールで計算します。</b>配分を出すAIには、それを変える権限を与えません。</p></div>
+      <div class="t"><span class="q">毎回ぶれない？</span><p>ぶれさせません。同じような事案には、同じ判断を返します。<b>正確さより、一貫していることを優先します。</b>使ったルールの版も保存します。</p></div>
+    </div>
+
+    <div class="exbox">
+      <span class="tag">たとえば、こんな形です</span>
+      <h4>ひとりで作ったものに、二人が乗る</h4>
+      <p>ある人が、冷蔵庫の写真から献立を出すアプリを、休みの日に作ったとします。そこに「うちの子の分の栄養計算を足せる」という人が乗り、「近所のスーパーのチラシと組ませたら売れる」という人が乗る。<b>3人で形になり、売れました。</b>このとき、最初に作った人、機能を足した人、売り方を持ってきた人の取り分を、売れた金額と作業の記録から決めます。</p>
+      <p style="margin-top:10px;font-size:13px;color:var(--ink-3)">※説明のための例で、実在の案件ではありません。</p>
+    </div>
+
+    <div class="concl"><div class="ct">ここが、いちばん難しいところです</div><p>貢献をきれいに数字にする方法は、まだ世界のどこにもありません。<br><span class="y">だから私たちは、そこを作っています。</span></p><p class="s">異議や、人が覆した判断は、すべて記録します。次に同じことが起きたときの基準になるからです。うまくいかなかった案件ほど、仕組みを賢くします。</p></div>
+  </section>
+</div>
+
 <div class="chap" id="act3">
   <div class="in"><div class="l"><div class="lab">CHAP.</div><div class="n">03</div><h2>AIが経営し、<br>人が責任を負う</h2><p>CEOはAI。経営と日常運営を、AIが担う構想です。<br><b>各プロジェクトを進めるかは、そのオーナーである人が決めます。</b></p></div></div>
 </div>
 <div class="page">
   <section class="card">
     <svg class="logo" viewBox="0 0 40 40" aria-hidden="true"><rect x="2.5" y="2.5" width="35" height="35" rx="9.5" fill="#F6A623"/><circle cx="8.6" cy="8.6" r="2.1" fill="#0E2A5B"/><circle cx="31.4" cy="8.6" r="2.1" fill="#0E2A5B"/><circle cx="8.6" cy="31.4" r="2.1" fill="#0E2A5B"/><circle cx="31.4" cy="31.4" r="2.1" fill="#0E2A5B"/><rect x="12.1" y="11" width="5.3" height="18" rx="2.3" fill="#FFFFFF"/><rect x="20.5" y="11" width="5.3" height="18" rx="2.3" fill="#FFFFFF"/><rect x="20.5" y="11" width="8.8" height="5.3" rx="2.3" fill="#FFFFFF"/><rect x="20.5" y="18.7" width="6.7" height="4.9" rx="2.2" fill="#FFFFFF"/></svg>
-    <div><span class="pill"><b>03</b><span>AI社員</span></span><span class="kicker">発注・進行・検収・精算まで</span></div>
+    <div><span class="pill"><b>03</b><span>運営</span></span><span class="kicker">発注・進行・検収・精算まで</span></div>
     <h2 class="t">誰が、どこまで担うのか。<br>AIが動かし、人が決めます</h2>
     <p class="lead">IFboxは、AIをCEOに据え、経営と日常運営をAIが担う構想です。人はCEO代行として対外的な窓口に立ち、契約とサービス運営の責任は運営法人が負います。ただし、各プロジェクトを進めるかどうかは、そのプロジェクトのオーナーである人が決めます。<b>整理・資料づくり・進行管理はAI社員が、事業の判断は事業オーナーが、実装と専門的な判断は外部が担います。</b>この境界を先に決めておくことで、人を増やさずに運営を続けられる設計にしています。</p>
     <div class="g3" style="margin-top:22px">
@@ -611,9 +687,9 @@
   <div class="in">
     <svg class="bigR" viewBox="0 0 40 40" aria-hidden="true"><rect x="2.5" y="2.5" width="35" height="35" rx="9.5" fill="#F6A623"/><circle cx="8.6" cy="8.6" r="2.1" fill="#07152F"/><circle cx="31.4" cy="8.6" r="2.1" fill="#07152F"/><circle cx="8.6" cy="31.4" r="2.1" fill="#07152F"/><circle cx="31.4" cy="31.4" r="2.1" fill="#07152F"/><rect x="12.1" y="11" width="5.3" height="18" rx="2.3" fill="#FFFFFF"/><rect x="20.5" y="11" width="5.3" height="18" rx="2.3" fill="#FFFFFF"/><rect x="20.5" y="11" width="8.8" height="5.3" rx="2.3" fill="#FFFFFF"/><rect x="20.5" y="18.7" width="6.7" height="4.9" rx="2.2" fill="#FFFFFF"/></svg>
     <div>
-      <p class="eb">IFbox ｜ 夢を目標に。使命を行動に。</p>
-      <h2>あなたの“もし”を、<br>聞かせてください。</h2>
-      <p class="sub">「もしできたら、面白くない？」を、そのまま書いてください。整っていなくて構いません。AI社員が整理し、需要を確かめ、応援する人・事業化する人・支える人につなぎます。アイデアがない方は、応援・実行・出資の立場で参加できます。</p>
+      <p class="eb">IFbox ｜ “もし”を置く</p>
+      <h2>“もし”を、<br>置いていってください。</h2>
+      <p class="sub">整った企画書はいりません。ひとことで構いません。休みの日に作ったもの、作りたいけど一人では無理だと思っているもの、あったらいいのにと思っただけのもの。<b>置いておけば、面白がった人が乗ってきます。</b></p>
       <ul class="get">
         <li>投稿・閲覧・名乗りは、すべて無料</li>
         <li>アイデアがなくても、実現する側として参加できる</li>
@@ -626,8 +702,8 @@
     <form class="cf" id="cform" novalidate>
       <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0" aria-hidden="true">
       <div class="row"><label>お名前<input type="text" name="name" placeholder="山田 太郎" required></label><label>メールアドレス<input type="email" name="email" placeholder="you@example.com" required></label></div>
-      <div class="row"><label>参加したい立場<select name="role"><option>発想を届ける（投稿者）</option><option>共感を届ける（利用者・応援者）</option><option>実行力を届ける（事業化したい）</option><option>資金を届ける（出資者・支援者）</option><option>掲載・提案（企業・団体）</option></select></label><label>所属（任意）<input type="text" name="org" placeholder="会社名・学校名など"></label></div>
-      <label>あなたの“もし”<textarea name="msg" rows="4" placeholder="例：もし、空いている介護施設の食堂を夜だけ町の食堂にできたら／もし、引退した職人の技をAIで若手に引き継げたら など"></textarea></label>
+      <div class="row"><label>参加したい立場<select name="role"><option>“もし”を出したい</option><option>面白がる・応援する</option><option>作れる（手を動かせる）</option><option>資金を届ける（出資者・支援者）</option><option>掲載・提案（企業・団体）</option></select></label><label>所属（任意）<input type="text" name="org" placeholder="会社名・学校名など"></label></div>
+      <label>あなたの“もし”<textarea name="msg" rows="4" placeholder="例：もし、冷蔵庫の中身を撮るだけで献立が決まったら／もし、子どもが勉強した分だけ動画を見られる仕組みがあったら／もし、親の通院の記録を家族で共有できたら など"></textarea></label>
       <label class="agree" style="display:flex;align-items:flex-start;gap:8px;font-weight:500"><input type="checkbox" name="agree" required style="width:auto;margin-top:5px"><span><a href="#privacy">個人情報の取り扱い</a>に同意します</span></label>
       <button class="btn btn-teal" type="submit" style="width:100%">“もし”を投稿する</button>
       <p class="pv">送信ボタンを押すと、入力内容を本文にしたメール作成画面が開きます。整った企画書は不要です。</p>
