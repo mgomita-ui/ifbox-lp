@@ -92,17 +92,40 @@
   /* hero : 文字が主役。白地・編集的 */
   .hero{padding-top:36px}
   .hero .card{padding:0;overflow:visible;background:#fff;color:var(--ink);box-shadow:var(--shadow)}
-  .hero .stage{position:relative;padding:52px 60px 50px}
+  .hero .stage{position:relative;padding:56px 60px 54px;display:grid;grid-template-columns:minmax(0,1fr) 384px;gap:48px;align-items:center}
+  .hero .col{min-width:0}
+  /* 実物の画面：1件の“もし”が積み上がる */
+  .ui{border:1px solid var(--line);border-radius:14px;background:#fff;box-shadow:0 20px 50px rgba(14,42,91,.14);overflow:hidden}
+  .ui .bar{background:var(--navy);color:#fff;padding:11px 16px;font-size:12px;font-weight:700;display:flex;align-items:center;gap:8px}
+  .ui .bar:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold);flex:none}
+  .ui .bar span{margin-left:auto;font-family:var(--latin);font-weight:600;font-size:10.5px;letter-spacing:.1em;color:var(--blue-lt,#9FC0EE)}
+  .ui .post{padding:16px 18px 14px;border-bottom:1px solid var(--line)}
+  .ui .post .who{font-size:11px;font-weight:700;color:var(--navy);background:var(--navy-soft);border-radius:5px;padding:3px 8px;display:inline-block;margin-bottom:7px}
+  .ui .post p{font-size:15px;font-weight:900;color:var(--navy);line-height:1.6}
+  .ui .join{padding:13px 18px;border-bottom:1px solid var(--line);display:grid;grid-template-columns:auto 1fr;gap:11px;align-items:start}
+  .ui .join .av{width:26px;height:26px;border-radius:50%;background:var(--gold);color:var(--navy);font-size:11px;font-weight:900;display:grid;place-items:center;flex:none}
+  .ui .join b{display:block;font-size:13.5px;font-weight:700;color:var(--ink);line-height:1.55}
+  .ui .join small{display:block;font-size:11.5px;color:var(--ink-3);margin-top:2px;line-height:1.55}
+  .ui .foot{padding:13px 18px 15px;background:#F8FAFC}
+  .ui .foot .k{font-size:11px;font-weight:700;color:var(--ink-3);margin-bottom:7px}
+  .ui .foot .row{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
+  .ui .foot .row div{background:var(--navy);border-radius:7px;padding:8px 4px;text-align:center}
+  .ui .foot .row b{display:block;font-family:var(--latin);font-size:15px;font-weight:700;color:var(--gold);line-height:1}
+  .ui .foot .row span{display:block;font-size:9.5px;color:rgba(255,255,255,.8);margin-top:3px}
+  @media (max-width:1040px){
+    .hero .stage{grid-template-columns:1fr;gap:36px}
+    .ui{max-width:420px}
+  }
   .hero .eb{color:var(--gold-deep);margin-bottom:24px}
   .hero .stm{position:relative;max-width:100%;margin:0;font-weight:900}
-  .hero .stm .l{display:block;font-weight:900;color:var(--navy);letter-spacing:-.01em;line-height:1.18;font-size:clamp(36px,9.4vw,124px);white-space:nowrap}
+  .hero .stm .l{display:block;font-weight:900;color:var(--navy);letter-spacing:-.01em;line-height:1.18;font-size:clamp(34px,5.4vw,72px);white-space:nowrap}
   .hero .stm .l em{font-style:normal;background-image:linear-gradient(transparent 64%,var(--gold) 64%,var(--gold) 90%,transparent 90%);padding:0 .04em}
-  .hero .notes{display:flex;flex-wrap:wrap;gap:12px 44px;margin-top:30px}
-  .hero .note{position:relative;padding-left:44px;font-size:15.5px;font-weight:700;color:var(--ink-2);white-space:nowrap}
-  .hero .note:before{content:"";position:absolute;left:0;top:.75em;width:32px;height:1.5px;background:var(--gold)}
+  .hero .notes{display:flex;flex-wrap:wrap;gap:10px 30px;margin-top:28px}
+  .hero .note{position:relative;padding-left:40px;font-size:14.5px;font-weight:700;color:var(--ink-2);white-space:nowrap}
+  .hero .note:before{content:"";position:absolute;left:0;top:.75em;width:28px;height:1.5px;background:var(--gold)}
   .hero .answer{margin-top:34px;font-size:clamp(20px,2.6vw,30px);font-weight:900;color:var(--navy)}
   .hero .answer em{font-style:normal;color:var(--gold-deep)}
-  .hero .sub{margin-top:14px;font-size:16.5px;line-height:1.95;color:var(--ink-2);max-width:38em}
+  .hero .sub{margin-top:14px;font-size:16px;line-height:1.95;color:var(--ink-2);max-width:30em}
   .hero .sub b{color:var(--ink)}
   .hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
   .hero .proof{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:22px;font-size:13px;color:var(--ink-3)}
@@ -115,7 +138,8 @@
     .hero .note{white-space:normal}
   }
   @media (max-width:760px){
-    .hero .stage{padding:36px 24px 36px}
+    .hero .stage{padding:36px 22px 36px;gap:30px}
+    .ui{max-width:100%}
     .hero .eb{margin-bottom:22px}
     .hero .note{font-size:14px}
     .hero .stm .l{white-space:normal}
@@ -435,6 +459,7 @@
 <header class="hero page" id="top">
   <div class="card">
     <div class="stage">
+     <div class="col">
       <p class="eb">IFbox ｜ 夜と週末に、何か作っている人へ</p>
       <h1 class="stm">
         <span class="l">つくれる。</span>
@@ -453,6 +478,21 @@
       </div>
       <div class="proof"><span>置いておくだけ、無料</span><span>作れなくても、乗るだけで参加できる</span><span>お金の話は、売れてから</span></div>
       <p class="firm">IFbox<small>IDEAS FLOW TO A BETTER SOCIETY ｜ 2026年 ・ 構想段階</small></p>
+     </div>
+     <div class="ui" aria-label="“もし”が積み上がる様子の例">
+       <div class="bar">案件カード<span>IFBOX</span></div>
+       <div class="post">
+         <span class="who">出した人</span>
+         <p>「もし、冷蔵庫の中身を撮るだけで<br>献立が決まったら」</p>
+       </div>
+       <div class="join"><span class="av">＋</span><div><b>「僕もこんなの作ってる」</b><small>レシートを読む部分は、もう動いている</small></div></div>
+       <div class="join"><span class="av">＋</span><div><b>「そこなら手伝える」</b><small>栄養計算を足せる。子ども向けの設定も</small></div></div>
+       <div class="join"><span class="av">＋</span><div><b>「こう売ればいいと思う」</b><small>近所のスーパーのチラシと組ませる</small></div></div>
+       <div class="foot">
+         <p class="k">売れたら、AIが配分を出す</p>
+         <div class="row"><div><b>?</b><span>出した人</span></div><div><b>?</b><span>作った人</span></div><div><b>?</b><span>売った人</span></div></div>
+       </div>
+     </div>
     </div>
   </div>
 </header>
