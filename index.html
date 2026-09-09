@@ -199,8 +199,8 @@
   .scheme .s + .s:after{content:"";position:absolute;left:-11px;top:32px;width:11px;height:3px;background:var(--teal-lt)}
   @media (max-width:900px){.scheme{grid-template-columns:1fr;gap:0;margin-top:20px}.scheme .s{border:0;border-left:2px solid var(--line);border-radius:0;padding:0 0 24px 24px;background:transparent}.scheme .s:last-child{border-left-color:transparent;padding-bottom:0}.scheme .s:before{position:absolute;left:-9px;top:2px;width:16px;height:16px;padding:0;border:0;border-radius:50%;background:var(--gold);font-size:0;line-height:0}.scheme .s + .s:after{display:none}}
   .trust{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
-  .trust .t{border-radius:12px;padding:18px 20px;background:#F8FAFB;border:1px solid var(--line)}
-  .trust .t h3{font-size:16px;font-weight:900;color:var(--navy);margin-bottom:8px;padding-bottom:8px;border-bottom:2px solid var(--teal)}
+  .trust .t{border-radius:12px;padding:18px 20px;background:#F8FAFB;border:1px solid var(--line);display:grid;grid-template-rows:subgrid;grid-row:span 2;align-content:start}
+  .trust .t h3{font-size:16px;font-weight:900;color:var(--navy);margin:0 0 8px;padding-bottom:8px;border-bottom:2px solid var(--teal);align-self:start}
   .trust .t ul{margin:0;padding:0;list-style:none;display:grid;gap:6px}
   .trust .t li{font-size:13.5px;color:var(--ink-2);padding-left:18px;position:relative;line-height:1.6}
   .trust .t li:before{content:"";position:absolute;left:0;top:9px;width:9px;height:9px;border-radius:50%;background:var(--teal)}
@@ -449,7 +449,7 @@
     <p class="lead">資金はクラウドファンディング、評価はコンテスト、担い手は求人サイト。<b>入口がばらばらで、どれも「計画ができていること」を前提にしています。</b>IFboxは、思いつきの段階から入れて、実現と運営までを一つの流れにすることを目指しています。</p>
     <div class="trust">
       <div class="t"><h3>投稿者が、安心して出せる</h3><ul><li>投稿・共有は無料。後から料金や持分を求められない</li><li>投稿日時と内容が記録され、発想の出所が残る</li><li>実行者が現れても、関わり方は投稿者本人が選ぶ</li></ul></div>
-      <div class="t"><h3>事業オーナーが、安心して引き受けられる</h3><ul><li>需要（共感・困りごと）が見えてから動ける</li><li>実証までは費用がかからない設計を想定</li><li>発注・検収・精算はAI社員が管理し、記録が残る</li></ul></div>
+      <div class="t"><h3>事業オーナーが、安心して動ける</h3><ul><li>需要（共感・困りごと）が見えてから動ける</li><li>実証までは費用がかからない設計を想定</li><li>発注・検収・精算はAI社員が管理し、記録が残る</li></ul></div>
       <div class="t"><h3>出資者が、安心して支えられる</h3><ul><li>出資金はIFboxの手数料の対象外。IFboxは資金を預からない</li><li>募集・契約は登録事業者との連携を前提に設計</li><li>実証の結果と運営の収支が、継続して見える</li></ul></div>
     </div>
     <div class="cmp">
