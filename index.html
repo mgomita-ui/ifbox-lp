@@ -14,11 +14,11 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Poppins:wght@500;600;700&display=swap">
 <style>
   :root{
-    --ink:#16203A;--ink-2:#3A465F;--ink-3:#6B7690;
+    --ink:#16203A;--ink-2:#3A465F;--ink-3:#5D687F;
     --bg:#EFF2F7;--paper:#FFFFFF;--line:#DCE3EC;--rule:#0E2A5B;
     --navy:#0E2A5B;--navy-deep:#07152F;--navy-soft:#E5EBF5;
     --teal:#2E5A9E;--teal-deep:#1E4380;--teal-lt:#9FC0EE;--teal-soft:#EAF1FB;
-    --gold:#F6A623;--gold-deep:#A8690A;--gold-soft:#FDF1DC;
+    --gold:#F6A623;--gold-deep:#8F5A08;--gold-soft:#FDF1DC;
     --yellow:#FFC629;--red:#D64545;
     --body:'Noto Sans JP',system-ui,-apple-system,sans-serif;--latin:'Poppins','Noto Sans JP',sans-serif;
     --shadow:0 12px 32px rgba(14,42,91,.10),0 2px 6px rgba(14,42,91,.06);
@@ -29,6 +29,8 @@
   body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.85;-webkit-font-smoothing:antialiased;position:relative;overflow-x:hidden}
   h1,h2,h3,h4{margin:0;line-height:1.35;text-wrap:balance;letter-spacing:.005em}
   p{margin:0}
+  /* 日本語の折り返し：行末に1文字だけ残るのを防ぐ */
+  p,li,h2,h3,h4,dd,dt,summary{text-wrap:pretty;word-break:auto-phrase}
   a{color:inherit}
   .wrap{max-width:1160px;margin:0 auto;padding:0 24px;position:relative}
   .ribbon{position:absolute;z-index:0;pointer-events:none}
@@ -73,9 +75,9 @@
   .kicker.gold{color:var(--gold-deep)}.kicker.navy{color:var(--navy)}
   .eb{font-family:var(--latin);font-weight:600;font-size:12.5px;letter-spacing:.32em;color:var(--teal);text-transform:uppercase}
   h2.t{font-size:clamp(26px,3.2vw,38px);font-weight:900;padding-bottom:16px;border-bottom:2px solid var(--rule);margin:6px 0 26px;padding-right:72px}
-  .lead{font-size:16px;color:var(--ink-2);max-width:56em;line-height:1.95}
+  .lead{font-size:16px;color:var(--ink-2);max-width:46em;line-height:1.95}
   .lead b{color:var(--ink)}
-  .note{font-size:12.5px;color:var(--ink-3);line-height:1.75;margin-top:22px;max-width:60em}
+  .note{font-size:12.5px;color:var(--ink-3);line-height:1.75;margin-top:22px;max-width:52em}
   .sm{font-size:13px;color:var(--ink-3)}
   .q{color:var(--gold)}
 
@@ -91,7 +93,7 @@
   .hero .card{padding:0;overflow:visible;background:#fff;color:var(--ink);box-shadow:var(--shadow)}
   .hero .stage{position:relative;padding:64px 60px 56px}
   .hero .eb{color:var(--gold-deep);margin-bottom:30px}
-  .hero .stm{position:relative;max-width:100%}
+  .hero .stm{position:relative;max-width:100%;margin:0;font-weight:900}
   .hero .stm .l{display:block;font-weight:900;color:var(--navy);letter-spacing:-.01em;line-height:1.18;font-size:clamp(34px,7.2vw,92px);white-space:nowrap}
   .hero .stm .l em{font-style:normal;background-image:linear-gradient(transparent 64%,var(--gold) 64%,var(--gold) 90%,transparent 90%);padding:0 .04em}
   .hero .notes{display:flex;flex-wrap:wrap;gap:12px 40px;margin-top:36px}
@@ -234,7 +236,7 @@
   .free .chips{display:flex;flex-wrap:wrap;gap:8px}
   .free .chips span{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 14px;font-size:14px;font-weight:700;color:var(--ink)}
   .free .chips svg{width:20px;height:20px;flex:none}
-  .free .sub{grid-column:1/3;font-size:13px;color:var(--ink-2);margin-top:-4px}
+  .free .sub{grid-column:1/3;font-size:13px;color:var(--ink-2);margin-top:-4px;max-width:48em}
   @media (max-width:800px){.free{grid-template-columns:1fr}.free .t{white-space:normal}.free .sub{grid-column:1}}
 
   /* revenue rows */
@@ -274,7 +276,7 @@
   .sep .dia .nd svg{width:40px;height:40px}
   .sep .dia .ar{height:4px;background:var(--teal);position:relative;border-radius:2px}
   .sep .dia .ar:after{content:"";position:absolute;right:-2px;top:-6px;border:8px solid transparent;border-left:12px solid var(--teal);border-right:0}
-  .sep .dia .ar span{position:absolute;left:50%;top:-24px;transform:translateX(-50%);font-size:12px;font-weight:700;color:var(--teal-deep)}
+  .sep .dia .ar span{position:absolute;left:50%;top:-26px;transform:translateX(-50%);font-size:12px;font-weight:700;color:#fff;background:var(--teal-deep);padding:3px 10px;border-radius:999px;line-height:1.5;white-space:nowrap}
   .sep .sub{grid-column:1/4;font-size:13.5px;color:var(--ink-2);margin-top:6px}
   @media (max-width:800px){.sep{grid-template-columns:1fr}}
   .cycle{display:grid;grid-template-columns:200px 1fr;gap:20px;align-items:center;border:1px solid var(--line);border-radius:12px;padding:20px 24px;margin-top:14px;background:#fff}
@@ -425,14 +427,14 @@
   <div class="card">
     <div class="stage">
       <p class="eb">IFbox ｜ 夜と週末に、何か作っている人へ</p>
-      <div class="stm">
+      <h1 class="stm">
         <span class="l">つくれる。</span>
         <span class="l">その先は、<em>まだ</em>。</span>
-        <span class="notes">
-          <span class="note a">「僕もこんなの作ってる」</span>
-          <span class="note b">「そこなら手伝える」</span>
-          <span class="note c">「こう売ればいいと思う」</span>
-        </span>
+      </h1>
+      <div class="notes">
+        <span class="note">「僕もこんなの作ってる」</span>
+        <span class="note">「そこなら手伝える」</span>
+        <span class="note">「こう売ればいいと思う」</span>
       </div>
       <p class="answer">その先を、<em>持ち寄る</em>。</p>
       <p class="sub">AIのおかげで、思いついたその日に動くものが作れるようになりました。けれど、仲間も、資金も、売り方も、AIは連れてきてくれません。<b>IFboxは、その先を持ち寄る場所です。</b></p>
