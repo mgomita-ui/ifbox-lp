@@ -191,7 +191,7 @@
   @media (max-width:560px){.hub{grid-template-columns:1fr}.hub .core{grid-column:1}}
 
   /* scheme: 7 steps */
-  .scheme{counter-reset:st;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:24px}
+  .scheme{counter-reset:st;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:24px}
   .scheme .s{position:relative;background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px 18px 18px;display:flex;flex-direction:column;gap:8px}
   .scheme .s:before{counter-increment:st;content:"0" counter(st);font-family:var(--latin);font-weight:700;font-size:15px;letter-spacing:.04em;color:var(--gold-deep);line-height:1;padding-bottom:8px;border-bottom:2px solid var(--gold);width:max-content}
   .scheme .s h3{font-size:17px;font-weight:900;color:var(--navy);line-height:1.4}
@@ -420,13 +420,12 @@
   <section class="card" id="scheme">
     <svg class="logo" viewBox="0 0 40 40" aria-hidden="true"><rect x="2.5" y="2.5" width="35" height="35" rx="9.5" fill="#F6A623"/><circle cx="8.6" cy="8.6" r="2.1" fill="#0E2A5B"/><circle cx="31.4" cy="8.6" r="2.1" fill="#0E2A5B"/><circle cx="8.6" cy="31.4" r="2.1" fill="#0E2A5B"/><circle cx="31.4" cy="31.4" r="2.1" fill="#0E2A5B"/><rect x="12.1" y="11" width="5.3" height="18" rx="2.3" fill="#FFFFFF"/><rect x="20.5" y="11" width="5.3" height="18" rx="2.3" fill="#FFFFFF"/><rect x="20.5" y="11" width="8.8" height="5.3" rx="2.3" fill="#FFFFFF"/><rect x="20.5" y="18.7" width="6.7" height="4.9" rx="2.2" fill="#FFFFFF"/></svg>
     <div><span class="pill"><b>02</b><span>しくみ</span></span><span class="kicker gold">“もし”が実現するまで</span></div>
-    <h2 class="t">話して育て、出品し、<br>チームで形にする。</h2>
-    <p class="lead">投稿箱ではありません。会話から“もし”を育て、面白がる人が集まってチームになり、事業として形にして、欲しい人に届ける。<b>IFboxが目指す、取引と実現の流れです。</b></p>
+    <h2 class="t">投げかける。合体させる。<br>売り方をつける。</h2>
+    <p class="lead">投稿箱ではありません。誰かの「もし」に、別の誰かの「作ってる」が合わさり、さらに別の誰かの「売れる」が乗る。<b>この3つがそろうと、思いつきは事業になります。</b>IFboxは、その3つが出会う場所です。</p>
     <div class="scheme">
-      <div class="s"><h3>話して、“もし”を育てる</h3><p>「もしできたら、面白くない？」を持ち寄り、会話から始めます。たとえば「AIでマンガを描きたい」といった思いつきを、面白がる人たちと練り上げます。</p></div>
-      <div class="s"><h3>出品し、仲間と出会う</h3><p>育てた“もし”を出品し、買いたい人や、一緒に形にしたい人との出会いにつなげます。投稿して終わりではなく、会話を続けながらプロジェクトの仲間を募ります。</p></div>
-      <div class="s"><h3>チームで小さく試す</h3><p>集まった仲間で小さく試し、何をつくり、誰に届けるかを具体化します。IFboxの支援を受けながら、プロジェクトのオーナーが実現に進むかを決めます。</p></div>
-      <div class="s"><h3>売買し、実現へ進む</h3><p>売りたい人と買いたい人の間で、AIが決める価格・配分による取引につなげます。チームで事業として形にし、欲しい人に届け、その後の運営へ進みます。</p></div>
+      <div class="s"><h3>投げかける</h3><p>「もし、こんなのがあれば」を出します。整っていなくて構いません。計画も企画書も要らず、思いついたまま並べられます。</p></div>
+      <div class="s"><h3>合体させる</h3><p>「僕もこんなの作ってる」が集まります。別々に進んでいたものが組み合わさり、一人では届かなかったところまで形になります。ここでチームができます。</p></div>
+      <div class="s"><h3>売り方をつける</h3><p>「僕はこんな売り方できる」で世に出ます。売りたい人と買いたい人の取引になり、その価格と、関わった人への配分はAIが決める設計です。</p></div>
     </div>
     <p class="note" style="margin-top:14px">※現在は構想・設計段階です。上記は目指している流れであり、参加条件や具体的な手続きは検討中です。すべての“もし”の事業化や、取引の成立を保証するものではありません。<br>※売買は実現までの途中段階でも行える構想です。取引の対象（利用権か、権利の譲渡か、成果物か）は現在設計中で、決まりしだいお示しします。<br>※入口は無料です。費用の考え方は<a href="#act5" style="color:var(--teal-deep)">価格</a>をご覧ください。</p>
   </section>
@@ -468,6 +467,7 @@
       <div class="sbox"><span class="n">事業オーナー</span><h3>事業を判断する</h3><p>進めるか、止めるか、誰と組むか。事業の判断は、人が責任を持って行う。</p></div>
       <div class="sbox gold"><span class="n">外部の専門家・登録事業者</span><h3>実装と専門判断を担う</h3><p>開発・製造・法務・会計などの実装と専門判断。出資募集・契約は登録事業者と連携。</p></div>
     </div>
+    <div class="sbox navy" style="margin-top:22px"><span class="n">運営の立場</span><h3>IFboxの機能は、場の提供です</h3><p>IFboxが提供するのは、“もし”が出会い、合体し、売り方がつく場と、その仕組みです。個々のプロジェクトを運営するのは、そのプロジェクトのチームです。<b>運営メンバーが個人として個別のプロジェクトに参加することはありますが、その場合も、場の運営とプロジェクトへの参加は分けて扱います。</b></p></div>
     <div class="concl"><div class="ct">夢と目標の違いは、計画性と具体性</div><p>「もしできたら」は、まだ夢です。需要を確かめ、検証し、計画に整え、発注と進行を管理する。<br><span class="y">AIは、夢を目標に変え、使命を行動に変える。IFboxは、そのお手伝いをします。</span></p><p class="s">経営と日常運営はAIが担い、進めるかどうかは人が決めます。固定費を最小にして、“もし”を回し続けるための設計です。</p></div>
   </section>
 </div>
@@ -600,7 +600,8 @@
       <details><summary><span class="qn">Q3</span>費用は、いつ・どれくらいかかりますか？<span class="pl">+</span></summary><div class="a">費用が発生するのは、取引が成立したときだけです。投稿・共感・名乗りだけでは発生しません。その取引の価格と、関わった人への配分はAIが決める設計で、IFboxはシステム内でプロジェクトを支援した対価として成功報酬を受け取ります。固定の料率は設けていません。決定ルールと成功報酬の条件は現在設計中で、発生条件・支払時期・取消時の扱いは契約前に明示します。AI運営サービスの料金は希望する場合だけ、事業持分は双方の合意があるときだけです。</div></details>
       <details><summary><span class="qn">Q4</span>出資額からIFboxの手数料が差し引かれますか？<span class="pl">+</span></summary><div class="a">差し引かない設計です。出資額そのものは、IFboxの手数料の計算対象にしません。IFboxが自ら出資金を預かることもありません。事業会社が別途契約するAI運営サービスなどの料金は、出資とは別にご案内します。出資の募集・契約は登録事業者との連携を前提としており、連携先で費用が発生する場合は、負担する方と金額を申込前にご案内します。</div></details>
       <details><summary><span class="qn">Q5</span>CEOがAIというのは、誰も責任を取らないということですか？<span class="pl">&plus;</span></summary><div class="a">違います。経営と日常運営をAIが担う構想ですが、契約とサービス運営の責任は運営法人が負います。人はCEO代行として対外的な窓口に立ちます。また、各プロジェクトを進めるかどうかは、そのプロジェクトのオーナーである人が決めます。AIが判断する範囲と、人が停止・修正できる範囲は、現在整理しています。</div></details>
-      <details><summary><span class="qn">Q6</span>これは決定した仕組みですか？<span class="pl">+</span></summary><div class="a">現在は設計案です。価格と配分の決定ルール、成功報酬の条件は設計中で、確定ではありません。取引の対象（利用権か、権利の譲渡か、成果物か）、AI運営料と事業持分の条件も未確定です。一方、このページからの投稿や参加の意思表示は無料で、それだけで後から料金や持分の提供を求めることはありません。有料サービスや持分を伴う支援は、条件をご提示し、合意いただいてから契約します。</div></details>
+      <details><summary><span class="qn">Q6</span>運営メンバーも、プロジェクトに参加するのですか？<span class="pl">+</span></summary><div class="a">参加することがあります。IFboxの機能はあくまで場と仕組みの提供で、個々のプロジェクトを運営するのはそのチームです。運営メンバーが個人としてプロジェクトに加わる場合も、場の運営とプロジェクトへの参加は分けて扱います。運営が自分の関わる案件を優先することのないよう、扱いのルールを現在整理しています。</div></details>
+      <details><summary><span class="qn">Q7</span>これは決定した仕組みですか？<span class="pl">+</span></summary><div class="a">現在は設計案です。価格と配分の決定ルール、成功報酬の条件は設計中で、確定ではありません。取引の対象（利用権か、権利の譲渡か、成果物か）、AI運営料と事業持分の条件も未確定です。一方、このページからの投稿や参加の意思表示は無料で、それだけで後から料金や持分の提供を求めることはありません。有料サービスや持分を伴う支援は、条件をご提示し、合意いただいてから契約します。</div></details>
     </div>
   </section>
 </div>
