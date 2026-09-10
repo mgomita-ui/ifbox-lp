@@ -89,7 +89,7 @@
 <script>
 (function(){
   var N=11, v=document.getElementById('viewer'), end=document.getElementById('end');
-  for(var i=N;i>=1;i--){
+  for(var i=1;i<=N;i++){
     var n=('0'+i).slice(-2);
     var s=document.createElement('section'); s.className='slide';
     s.innerHTML='<img src="pages/p'+n+'.jpg" alt="ページ'+i+'"'+(i>2?' loading="lazy"':'')+'>';
